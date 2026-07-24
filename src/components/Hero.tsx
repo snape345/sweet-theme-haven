@@ -5,9 +5,10 @@ import { Volume2, VolumeX, Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import heroBg from '../assets/hero-bg.mp4.asset.json'
 import heroSinger from '../assets/hero-singer.mp4.asset.json'
-import heroDancer from '../assets/hero-dancer.mp4.asset.json'
+import heroDancerContemporary from '../assets/hero-dancer-contemporary.mp4.asset.json'
+import heroDancerSalsa from '../assets/hero-dancer-salsa.mp4.asset.json'
 
-const heroVideos = [heroBg.url, heroSinger.url, heroDancer.url]
+const heroVideos = [heroBg.url, heroSinger.url, heroDancerContemporary.url, heroDancerSalsa.url]
 
 export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
