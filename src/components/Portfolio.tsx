@@ -1,88 +1,96 @@
 'use client'
 
-import { Disc3, Mic2, Sparkles, ArrowRight } from 'lucide-react'
-import djImg from '@/assets/dj.jpg'
-import singerImg from '@/assets/singer.jpg'
-import dancerImg from '@/assets/dancer.jpg'
-
-function ServiceCard({
-  img,
-  icon,
-  label,
-  title,
-  copy,
-}: {
-  img: string
-  icon: React.ReactNode
-  label: string
-  title: string
-  copy: string
-}) {
-  return (
-    <div className="group">
-      <div className="relative overflow-hidden border border-border">
-        <img
-          src={img}
-          alt={title}
-          loading="lazy"
-          className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
-      <div className="mt-6 flex items-center gap-3">
-        <span className="grid h-9 w-9 place-items-center border border-gold/60 text-gold">{icon}</span>
-        <span className="eyebrow">{label}</span>
-      </div>
-      <h3 className="mt-4 font-display text-3xl">{title}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-sm">{copy}</p>
-    </div>
-  )
-}
+import { Play, ExternalLink } from 'lucide-react'
+import { Button } from './ui/button'
 
 export function Portfolio() {
   return (
-    <section className="relative py-28 lg:py-40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="eyebrow">01 · The Offering</span>
-            <h2 className="mt-4 max-w-2xl font-display text-4xl lg:text-6xl">
-              Sourcing that feels effortless.
-            </h2>
+    <section id="portfolio" className="relative py-32 bg-background">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
+            <span className="text-sm font-semibold text-muted-foreground">
+              Featured Talent
+            </span>
+            <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-          <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-            Three focused disciplines. One considered concierge. We introduce the right freelance
-            artist for your space, then coordinate the details.
+          
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
+            <span className="block mb-2">Our Roster in Action</span>
+          </h2>
+          
+          <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            A recent campaign starring one of our represented creators — proof that the right talent turns a brief into a moment.
           </p>
         </div>
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-3">
-          <ServiceCard
-            img={djImg}
-            icon={<Disc3 size={18} />}
-            label="Service I"
-            title="Freelance DJ Sourcing"
-            copy="From open-format sunset sets to late-night house residencies, matched to the mood, format and clientele of your venue."
-          />
-          <ServiceCard
-            img={singerImg}
-            icon={<Mic2 size={18} />}
-            label="Service II"
-            title="Vocalist Sourcing"
-            copy="Live vocalists for lounges, private dinners and hotel programming — from jazz and soul to acoustic and contemporary."
-          />
-          <ServiceCard
-            img={dancerImg}
-            icon={<Sparkles size={18} />}
-            label="Service III"
-            title="Dancer & Performer Sourcing"
-            copy="Elegant dancers and specialty performers for immersive lounge experiences, private events and hotel programming."
-          />
-        </div>
+        {/* Featured Video */}
+        <div className="max-w-6xl mx-auto">
+          <div className="relative bg-card clean-border rounded-3xl overflow-hidden elevated-shadow">
+            {/* Video Embed */}
+            <div className="relative">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/fIbDWDh6aYw?rel=0&showinfo=0&modestbranding=1"
+                  title="Featured Talent Hub campaign"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full rounded-t-3xl"
+                />
+              </div>
+              
+              {/* Floating Status Badge */}
+              <div className="absolute top-6 right-6">
+                <span className="glass-effect rounded-xl px-4 py-2 text-sm font-medium text-white backdrop-blur-md">
+                  Latest Campaign
+                </span>
+              </div>
+            </div>
 
-        <div className="mt-16 flex justify-center">
-          <a href="#services" className="btn-outline-gold">
-            All Services <ArrowRight size={14} />
-          </a>
+            {/* Project Details */}
+            <div className="p-8 lg:p-12">
+              <div className="flex-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="bg-accent-purple/10 text-accent-purple px-3 py-1 rounded-full text-sm font-medium">
+                    Brand Campaign
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    Client: Hampton
+                  </span>
+                </div>
+                
+                <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                  The Lonely Journey
+                </h3>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  A campaign led by one of our represented creators, exploring the isolation founders face and the power of community. Talent Hub paired the right voice with the right brief — from casting to on-set delivery.
+                </p>
+                
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                  <div>
+                    <span className="text-muted-foreground block">Category</span>
+                    <span className="font-medium">Creator Campaign</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block">Talent</span>
+                    <span className="font-medium">Signed Roster</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block">Deliverable</span>
+                    <span className="font-medium">Hero Spot + Cutdowns</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground block">Reach</span>
+                    <span className="font-medium">Multi-platform</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
