@@ -416,7 +416,7 @@ export function Services() {
             
             {/* Photos hanging from second line */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
-              {services.slice(3, 6).map((service, index) => (
+              {services.slice(3, 7).map((service, index) => (
                 <div
                   key={service.id}
                   className={`transform transition-all duration-700 ${
