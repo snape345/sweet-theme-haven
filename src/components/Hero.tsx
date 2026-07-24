@@ -107,13 +107,14 @@ export function Hero() {
       {/* MASSIVE VIDEO - Takes up 95% of space */}
       <video
         ref={videoRef}
+        key={heroVideos[videoIndex]}
         className="absolute inset-0 w-full h-full object-cover scale-110"
         autoPlay
         muted
-        loop
         playsInline
+        onEnded={() => setVideoIndex((i) => (i + 1) % heroVideos.length)}
       >
-        <source src={heroBg.url} type="video/mp4" />
+        <source src={heroVideos[videoIndex]} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
