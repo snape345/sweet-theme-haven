@@ -2,17 +2,17 @@
 
 export function Footer() {
   const aiTools = [
-    'Runway Gen-4',
-    'Kling 2', 
-    'Veo 3',
-    'Higgsfield AI',
-    'Hailuo Minimax 2',
-    'Midjourney',
-    'Leonardo AI',
-    'Krea AI',
-    'Runway',
-    'Suno AI',
-    'ElevenLabs'
+    'Fashion & Beauty',
+    'Tech & SaaS',
+    'Sports & Fitness',
+    'Food & Beverage',
+    'Entertainment',
+    'Automotive',
+    'Travel & Hospitality',
+    'Lifestyle',
+    'Gaming',
+    'Finance',
+    'Retail'
   ]
 
   return (
@@ -23,11 +23,11 @@ export function Footer() {
           <div className="col-span-12 md:col-span-4">
             <div>
               <div className="font-bagel text-background text-3xl tracking-wider mb-4">
-                MOJJU
+                TALENT HUB
               </div>
               <p className="text-background/70 leading-relaxed mb-6">
-                Revolutionizing video production with intelligent AI that understands 
-                creativity, storytelling, and human emotion.
+                A modern talent management agency representing creators, actors, and models — 
+                and connecting them with the brands moving culture forward.
               </p>
               {/* Social Media Icons */}
               <div className="flex items-center space-x-6">
@@ -92,12 +92,12 @@ export function Footer() {
           {/* Tools We Use Section */}
           <div className="col-span-12 md:col-span-8">
             <div>
-              <h4 className="font-black text-2xl text-background mb-4">TOOLS WE USE</h4>
+              <h4 className="font-black text-2xl text-background mb-4">INDUSTRIES WE SERVE</h4>
               
-              {/* AI Tools Description */}
+              {/* Industries Description */}
               <p className="text-background/70 text-base mb-8 leading-relaxed">
-                We leverage the latest AI technology to deliver cutting-edge video production. 
-                Our toolkit combines the best generative AI models for video, audio, and visual content creation.
+                From heritage brands to breakout startups, we place talent across every category 
+                that speaks to modern audiences.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -118,7 +118,7 @@ export function Footer() {
         <div className="border-t border-background/20 pt-8 mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-background/70 mb-4 md:mb-0">
-              © 2025 MOJJU. All rights reserved.
+              © 2026 Talent Hub. All rights reserved.
             </div>
             <div className="text-sm text-background/70">
               2847 HIGHLAND AVE. SUITE 310 BIRMINGHAM 35205, AL, USA
