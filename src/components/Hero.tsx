@@ -139,36 +139,11 @@ export function Hero() {
 
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a 
-                href="#portfolio" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Work
-              </a>
-              <a 
-                href="#about" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Process
-              </a>
-              <a 
-                href="#services" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Capabilities
-              </a>
-              <a 
-                href="#team" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Team
-              </a>
-              <a 
-                href="#contact" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Contact
-              </a>
+              <a href="#portfolio" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Roster</a>
+              <a href="#about" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">How It Works</a>
+              <a href="#services" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Services</a>
+              <a href="#team" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Team</a>
+              <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Contact</a>
             </div>
 
             {/* Right Side - Video Controls + CTA + Mobile Menu */}
