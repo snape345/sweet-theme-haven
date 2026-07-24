@@ -15,7 +15,7 @@ export function Team() {
       name: "Rami Haddad",
       crime: "FOUNDER · DUBAI",
       bounty: "Concept lead",
-      description: "Building Talent Hub Middle East as a single point of contact between Dubai's premium venues and the freelance artists who elevate them.",
+      description: "Building Talent Source ME as a single point of contact between Dubai's premium venues and the freelance artists who elevate them.",
       image: marcusPhoto,
       rotation: 'rotate-3',
       mustacheStyle: "artistic"
@@ -129,7 +129,7 @@ export function Team() {
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
             <span className="block mb-2">The people behind</span>
-            <span className="block text-foreground">TALENT HUB ME</span>
+            <span className="block text-foreground">TALENT SOURCE ME</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
