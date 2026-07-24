@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Volume2, VolumeX, Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
+import heroBg from '../assets/hero-bg.mp4.asset.json'
 
 export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
@@ -107,7 +108,7 @@ export function Hero() {
         loop
         playsInline
       >
-        <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
+        <source src={heroBg.url} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
