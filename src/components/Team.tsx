@@ -12,64 +12,64 @@ import leoPhoto from '../assets/team-member-7.png'
 export function Team() {
   const wantedCriminals = [
     {
-      name: "Marcus 'The Pixel Bandit'",
-      crime: "ARMED CREATIVE ROBBERY",
-      bounty: "$8,500",
-      description: "Notorious for stealing ordinary footage and transforming it into extraordinary visual experiences. Approach with caution - carries dangerous levels of creative vision and technical expertise.",
+      name: "Marcus Reed",
+      crime: "FOUNDER & CEO",
+      bounty: "Since 2018",
+      description: "Built Talent Hub from a rolodex into a modern agency. Spends his days matching the right voice with the right brand — and negotiating deals that keep both sides happy.",
       image: marcusPhoto,
       rotation: 'rotate-3',
       mustacheStyle: "artistic"
     },
     {
-      name: "Sofia 'The Frame Thief'",
-      crime: "GRAND THEFT OF IMAGINATION",
-      bounty: "$6,200",
-      description: "Wanted for stealing impossible creative briefs and turning them into award-winning masterpieces. Armed with strategic thinking and dangerous levels of project management skills.",
+      name: "Sofia Alvarez",
+      crime: "HEAD OF TALENT",
+      bounty: "12 yrs in casting",
+      description: "Sofia scouts, signs, and develops the roster. If you've seen a breakout creator in the last three years, chances are she found them first.",
       image: sofiaPhoto,
       rotation: 'rotate-2',
       mustacheStyle: "handlebar"
     },
     {
-      name: "Jake 'The Render Rogue'",
-      crime: "MASTERMINDING TECHNICAL HEISTS",
-      bounty: "$11,800",
-      description: "Ringleader of rendering crimes, orchestrating elaborate computational operations. Wanted for leading sophisticated processing schemes that push hardware beyond its limits.",
+      name: "Jake Nguyen",
+      crime: "HEAD OF PARTNERSHIPS",
+      bounty: "$40M+ booked",
+      description: "Runs point on brand deals from first pitch to signed contract. Fluent in creative briefs, campaign KPIs, and rate cards.",
       image: jakePhoto,
       rotation: 'rotate-2',
       mustacheStyle: "thick"
     },
     {
-      name: "Maya 'The Code Crusher'",
-      crime: "DIGITAL WIZARDRY & ALGORITHM SORCERY",
-      bounty: "$9,300",
-      description: "Wanted for conjuring flawless code from chaotic requirements using forbidden programming magic. Known to transform complex problems into elegant solutions with mysterious technical powers.",
+      name: "Maya Patel",
+      crime: "CREATIVE DIRECTOR",
+      bounty: "8 yrs on set",
+      description: "Shapes every campaign from concept to delivery. Turns brand goals into stories that land — and makes sure our talent looks incredible doing it.",
       image: mayaPhoto,
       rotation: '-rotate-2',
       mustacheStyle: "curly"
     },
     {
-      name: "Connor 'The Digital Desperado'",
-      crime: "PRODUCTION WITH INTENT TO AMAZE",
-      bounty: "$13,700",
-      description: "Mastermind behind revolutionary content creation operations. Wanted for disrupting traditional production methods and making competitors question their entire approach.",
+      name: "Connor Walsh",
+      crime: "PRODUCTION LEAD",
+      bounty: "200+ shoots",
+      description: "The one keeping shoots on time and on budget. Logistics, crews, permits, deliverables — Connor makes it look easy.",
       image: connorPhoto,
       rotation: 'rotate-1',
       mustacheStyle: "villainous"
     },
     {
-      name: "Zara 'The Motion Maverick'",
-      crime: "ANIMATION MANIPULATION & EFFECT FORGERY",
-      bounty: "$7,900",
-      description: "Notorious for crafting motion graphics so smooth they defy the laws of physics. Armed with After Effects mastery and a dangerous eye for kinetic perfection.",
+      name: "Zara Osei",
+      crime: "SOCIAL STRATEGIST",
+      bounty: "1B+ views managed",
+      description: "Turns our talent's content into audience-building machines. Platform-native strategy, from TikTok to LinkedIn.",
       image: zaraPhoto,
       rotation: '-rotate-1',
       mustacheStyle: "artistic"
     },
     {
-      name: "Leo 'The Effect Enforcer'",
-      crime: "WANDERING VFX SYNTHESIS SCHEMES",
-      bounty: "$10,400",
-      description: "A nomadic visual effects outlaw who drifts from project to project, leaving behind a trail of jaw-dropping composites and impossible cinematic magic. Master of the digital realm.",
+      name: "Leo Marchetti",
+      crime: "LEGAL & CONTRACTS",
+      bounty: "Zero missed clauses",
+      description: "Our in-house counsel. Protects the roster, closes clean deals, and keeps every partnership on solid ground.",
       image: leoPhoto,
       rotation: 'rotate-3',
       mustacheStyle: "handlebar"
@@ -122,18 +122,18 @@ export function Team() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Meet the Outlaws
+              Meet the Team
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
-            <span className="block mb-2">These people are</span>
-            <span className="block text-foreground">WANTED</span>
+            <span className="block mb-2">The people behind</span>
+            <span className="block text-foreground">TALENT HUB</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Highly skilled and creatively dangerous
+            Agents, producers, and strategists working for our roster
           </p>
         </div>
 
