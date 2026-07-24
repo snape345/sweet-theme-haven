@@ -317,7 +317,7 @@ export function About() {
               {/* Main gallery image */}
               <img 
                 src={storyboardImage}
-                alt="A snapshot of Talent Hub Middle East's freelance DJs, vocalists and performers across Dubai"
+                alt="A snapshot of Talent Source ME's freelance DJs, vocalists and performers across Dubai"
                 className="w-full h-auto rounded-xl"
                 style={{
                   filter: 'contrast(1.05) saturate(1.1) brightness(0.95)'

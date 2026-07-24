@@ -34,7 +34,7 @@ export function Portfolio() {
               <div className="aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/fIbDWDh6aYw?rel=0&showinfo=0&modestbranding=1"
-                  title="Talent Hub Middle East — mood reel"
+                  title="Talent Source ME — mood reel"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen

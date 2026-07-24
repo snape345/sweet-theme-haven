@@ -23,7 +23,7 @@ export function Footer() {
           <div className="col-span-12 md:col-span-4">
             <div>
               <div className="font-bagel text-background text-3xl tracking-wider mb-4">
-                TALENT HUB ME
+                TALENT SOURCE ME
               </div>
               <p className="text-background/70 leading-relaxed mb-6">
                 A discreet Dubai-based sourcing concept connecting hotels, lounges and beach clubs
@@ -118,10 +118,10 @@ export function Footer() {
         <div className="border-t border-background/20 pt-8 mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-background/70 mb-4 md:mb-0">
-              © {new Date().getFullYear()} Talent Hub Middle East. All rights reserved.
+              © {new Date().getFullYear()} Talent Source ME. All rights reserved.
             </div>
             <div className="text-sm text-background/70">
-              DUBAI, UNITED ARAB EMIRATES · HELLO@TALENTHUB.ME
+              DUBAI, UNITED ARAB EMIRATES · HELLO@TALENTSOURCE.ME
             </div>
           </div>
         </div>
