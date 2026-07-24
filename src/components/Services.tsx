@@ -9,52 +9,52 @@ export function Services() {
 
   const services = [
     {
-      id: 'brand-deals',
-      title: "Brand Partnerships",
-      description: "We match your brand with talent whose audience actually cares — from one-off posts to long-term ambassadorships.",
+      id: 'dj-sourcing',
+      title: "Freelance DJ Sourcing",
+      description: "Open-format, house, deep, Afro and Arabic — freelance DJs matched to your venue's room, mood and clientele.",
       color: 'accent-emerald',
       rotation: 'rotate-2',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1571266028243-e4bb35f0f76c?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'casting',
-      title: "Casting & Bookings", 
-      description: "Curated shortlists of actors, models, and creators for commercials, editorials, and productions.",
+      id: 'vocalist-sourcing',
+      title: "Vocalist Sourcing",
+      description: "Live singers for lounge, dining and hotel programming — jazz, soul, acoustic and contemporary sets.",
       color: 'accent-blue',
       rotation: '-rotate-1',
-      image: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'creator-mgmt',
-      title: "Creator Management",
-      description: "Full-service representation for content creators — deal flow, negotiation, and career strategy.",
+      id: 'dancer-sourcing',
+      title: "Dancer & Performer Sourcing",
+      description: "Elegant dancers and specialty performers for immersive lounge nights, private events and hotel programming.",
       color: 'accent-purple',
       rotation: 'rotate-1',
-      image: 'https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'campaigns',
-      title: "Campaign Production",
-      description: "End-to-end campaign execution — creative, talent, shoot, delivery — under one roof.",
+      id: 'online-promotion',
+      title: "Online Promotion",
+      description: "Discreet social-media promotion for talent and venue collaborations — thoughtfully produced content that respects your brand.",
       color: 'accent-emerald',
       rotation: '-rotate-2',
-      image: 'https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'events',
-      title: "Events & Appearances",
-      description: "Book our talent for launches, panels, hosting gigs, and red carpet activations.",
+      id: 'coordination',
+      title: "Booking Coordination",
+      description: "A single point of contact for introductions, availability and logistics — no commercial transactions handled online.",
       color: 'accent-blue',
       rotation: 'rotate-3',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'social',
-      title: "Social & Content",
-      description: "Native, on-brand content produced by talent your audience already trusts.",
+      id: 'programming',
+      title: "Venue Programming",
+      description: "Ongoing calendars for hotels, beach clubs and lounges — the right artist in the right slot, week after week.",
       color: 'accent-purple',
       rotation: '-rotate-1',
-      image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=300&fit=crop&auto=format'
     }
   ]
 
@@ -93,7 +93,7 @@ export function Services() {
           }`}>
             <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-amber-200/80">
-              What We Offer
+              What We Quietly Do
             </span>
             <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse" />
           </div>
@@ -107,7 +107,7 @@ export function Services() {
           <p className={`text-xl text-amber-200/90 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            Talent, campaigns, and management — built around what your brand actually needs
+            Six focused offerings — sourcing, promotion and coordination for Dubai's premium hospitality
           </p>
         </div>
 
@@ -318,7 +318,7 @@ export function Services() {
                     
                     {/* Developer stamp */}
                     <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
-                      MOJJU LAB
+                      TALENT HUB · ME
                     </div>
                   </div>
                 </div>
@@ -521,7 +521,7 @@ export function Services() {
                     <div className="absolute bottom-8 left-3 w-2 h-8 bg-yellow-100/20 rounded-full transform rotate-15" />
                     
                     <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
-                      MOJJU LAB
+                      TALENT HUB · ME
                     </div>
                   </div>
                 </div>
@@ -532,7 +532,7 @@ export function Services() {
           {/* Darkroom atmosphere note */}
           <div className="mt-16 text-center">
             <p className="text-sm text-amber-200/70 leading-relaxed max-w-2xl mx-auto">
-              Each piece is carefully developed in our creative darkroom, ensuring every detail captures the essence of your vision with precision and artistic flair.
+              Every shortlist is developed with the care of a darkroom print — quietly, deliberately, and matched to the room it will play in.
             </p>
           </div>
         </div>

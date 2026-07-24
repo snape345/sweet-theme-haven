@@ -12,64 +12,64 @@ import leoPhoto from '../assets/team-member-7.png'
 export function Team() {
   const wantedCriminals = [
     {
-      name: "Marcus Reed",
-      crime: "FOUNDER & CEO",
-      bounty: "Since 2018",
-      description: "Built Talent Hub from a rolodex into a modern agency. Spends his days matching the right voice with the right brand — and negotiating deals that keep both sides happy.",
+      name: "Rami Haddad",
+      crime: "FOUNDER · DUBAI",
+      bounty: "Concept lead",
+      description: "Building Talent Hub Middle East as a single point of contact between Dubai's premium venues and the freelance artists who elevate them.",
       image: marcusPhoto,
       rotation: 'rotate-3',
       mustacheStyle: "artistic"
     },
     {
-      name: "Sofia Alvarez",
+      name: "Layla Fahmy",
       crime: "HEAD OF TALENT",
-      bounty: "12 yrs in casting",
-      description: "Sofia scouts, signs, and develops the roster. If you've seen a breakout creator in the last three years, chances are she found them first.",
+      bounty: "Roster & scouting",
+      description: "Curates the roster of freelance DJs, vocalists and performers — vetted through Dubai's hospitality circles, matched by room, format and mood.",
       image: sofiaPhoto,
       rotation: 'rotate-2',
       mustacheStyle: "handlebar"
     },
     {
-      name: "Jake Nguyen",
-      crime: "HEAD OF PARTNERSHIPS",
-      bounty: "$40M+ booked",
-      description: "Runs point on brand deals from first pitch to signed contract. Fluent in creative briefs, campaign KPIs, and rate cards.",
+      name: "Karim Nasser",
+      crime: "VENUE PARTNERSHIPS",
+      bounty: "Hotels · Beach Clubs",
+      description: "Runs point with hotels, lounges and beach clubs — briefs, calendars and the quiet coordination that keeps a programme feeling seamless.",
       image: jakePhoto,
       rotation: 'rotate-2',
       mustacheStyle: "thick"
     },
     {
-      name: "Maya Patel",
-      crime: "CREATIVE DIRECTOR",
-      bounty: "8 yrs on set",
-      description: "Shapes every campaign from concept to delivery. Turns brand goals into stories that land — and makes sure our talent looks incredible doing it.",
+      name: "Amira Zayed",
+      crime: "MUSIC DIRECTOR",
+      bounty: "DJs · Vocalists",
+      description: "Shapes the sonic identity of every room we programme — from open-format sunset sets to late-night residencies and live vocal nights.",
       image: mayaPhoto,
       rotation: '-rotate-2',
       mustacheStyle: "curly"
     },
     {
-      name: "Connor Walsh",
-      crime: "PRODUCTION LEAD",
-      bounty: "200+ shoots",
-      description: "The one keeping shoots on time and on budget. Logistics, crews, permits, deliverables — Connor makes it look easy.",
+      name: "Omar Khalil",
+      crime: "BOOKING COORDINATOR",
+      bounty: "Logistics · Timing",
+      description: "The one keeping bookings on time and on brief. Introductions, availability, backline notes — handled quietly by a single point of contact.",
       image: connorPhoto,
       rotation: 'rotate-1',
       mustacheStyle: "villainous"
     },
     {
-      name: "Zara Osei",
-      crime: "SOCIAL STRATEGIST",
-      bounty: "1B+ views managed",
-      description: "Turns our talent's content into audience-building machines. Platform-native strategy, from TikTok to LinkedIn.",
+      name: "Nadia Rahman",
+      crime: "ONLINE PROMOTION",
+      bounty: "Social · Editorial",
+      description: "Discreet social-media promotion for artists and venue collaborations. Thoughtful content that respects the brand of the room.",
       image: zaraPhoto,
       rotation: '-rotate-1',
       mustacheStyle: "artistic"
     },
     {
-      name: "Leo Marchetti",
-      crime: "LEGAL & CONTRACTS",
-      bounty: "Zero missed clauses",
-      description: "Our in-house counsel. Protects the roster, closes clean deals, and keeps every partnership on solid ground.",
+      name: "Samir Youssef",
+      crime: "PERFORMER RELATIONS",
+      bounty: "Dancers · Specialty",
+      description: "Represents dancers and specialty performers on the roster — availability, rehearsal, wardrobe and the small details that raise a night.",
       image: leoPhoto,
       rotation: 'rotate-3',
       mustacheStyle: "handlebar"
@@ -129,11 +129,11 @@ export function Team() {
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
             <span className="block mb-2">The people behind</span>
-            <span className="block text-foreground">TALENT HUB</span>
+            <span className="block text-foreground">TALENT HUB ME</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Agents, producers, and strategists working for our roster
+            Scouts, coordinators and strategists working for Dubai's finest rooms
           </p>
         </div>
 

@@ -134,7 +134,7 @@ export function Hero() {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
-              <span className="font-bagel text-white text-xl tracking-wider">TALENT HUB</span>
+              <span className="font-bagel text-white text-xl tracking-wider">TALENT HUB ME</span>
             </motion.div>
 
             {/* Navigation Menu */}
@@ -143,7 +143,7 @@ export function Hero() {
               <a href="#about" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">How It Works</a>
               <a href="#services" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Services</a>
               <a href="#team" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Team</a>
-              <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Contact</a>
+              <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Enquire</a>
             </div>
 
             {/* Right Side - Video Controls + CTA + Mobile Menu */}
@@ -176,7 +176,7 @@ export function Hero() {
                 }}
                 className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
               >
-                Book a Call
+                Enquire
               </motion.button>
 
               {/* Mobile Hamburger Menu Button */}
@@ -273,7 +273,7 @@ export function Hero() {
               }}
               className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
             >
-              Book a Call
+              Enquire
             </motion.button>
           </div>
         </div>
@@ -290,9 +290,12 @@ export function Hero() {
       >
         <div className="max-w-2xl">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white">
-            <span className="block">WHERE TALENT</span>
-            <span className="block">MEETS OPPORTUNITY</span>
+            <span className="block">TALENT FOR DUBAI'S</span>
+            <span className="block">FINEST VENUES</span>
           </h1>
+          <p className="mt-4 text-white/80 text-base sm:text-lg max-w-xl">
+            Freelance DJs, vocalists, dancers and performers — sourced discreetly for hotels, lounges and beach clubs across Dubai.
+          </p>
         </div>
       </motion.div>
 

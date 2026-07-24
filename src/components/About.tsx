@@ -10,32 +10,32 @@ export function About() {
   const processSteps = [
     {
       number: "01",
-      title: "Discover Talent",
-      description: "We scout, vet, and sign standout creators, actors, and models",
+      title: "Inquire",
+      description: "Share your venue, dates and the mood you have in mind",
       color: "accent-blue"
     },
     {
-      number: "02", 
-      title: "Match the Brief",
-      description: "Right voice, right audience, right fit for your brand",
+      number: "02",
+      title: "Get Matched",
+      description: "A shortlist of freelance DJs, vocalists, dancers or performers",
       color: "accent-emerald"
     },
     {
       number: "03",
-      title: "Negotiate & Book",
-      description: "Contracts, rates, and rights — handled end-to-end",
+      title: "Coordinate",
+      description: "Introductions, timing and logistics — quietly handled",
       color: "accent-purple"
     },
     {
       number: "04",
-      title: "Produce & Deliver",
-      description: "On-set support, content review, and timely delivery",
+      title: "Programme the Night",
+      description: "The artist performs; you keep commercial terms direct",
       color: "accent-blue"
     },
     {
       number: "05",
-      title: "Grow the Career",
-      description: "Long-term strategy, repeat bookings, and press",
+      title: "Promote & Repeat",
+      description: "Light online promotion and a growing roster you can rebook",
       color: "accent-purple"
     }
   ]
@@ -81,11 +81,11 @@ export function About() {
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
-            From Signing to Spotlight
+            From Enquiry to Encore
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            The five-step system behind every Talent Hub booking
+            A quiet, considered flow — designed around the tempo of premium hospitality in Dubai
           </p>
         </div>
 
@@ -274,7 +274,7 @@ export function About() {
             {/* Film Speed Indicator */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-foreground">150+ Talent</span>
+              <span className="text-sm font-semibold text-foreground">Freelance Roster</span>
             </div>
             
             <div className="w-px h-6 bg-border" />
@@ -282,7 +282,7 @@ export function About() {
             {/* Duration */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-accent-blue rounded-full animate-pulse" style={{animationDelay: '0.5s'}} />
-              <span className="text-sm font-semibold text-foreground">48hr Casting</span>
+              <span className="text-sm font-semibold text-foreground">Dubai Native</span>
             </div>
             
             <div className="w-px h-6 bg-border" />
@@ -290,7 +290,7 @@ export function About() {
             {/* Quality */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-accent-purple rounded-full animate-pulse" style={{animationDelay: '1s'}} />
-              <span className="text-sm font-semibold text-foreground">Global Reach</span>
+              <span className="text-sm font-semibold text-foreground">Discreet Coordination</span>
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@ export function About() {
         <div className="mt-20">
           <div className="text-center mb-8">
             <p className="text-muted-foreground">
-              A snapshot of our roster — the faces behind the campaigns
+              A glimpse of the artists we source across Dubai's rooms
             </p>
           </div>
           
@@ -317,7 +317,7 @@ export function About() {
               {/* Main gallery image */}
               <img 
                 src={storyboardImage}
-                alt="A snapshot of the Talent Hub roster across creators, actors, and models"
+                alt="A snapshot of Talent Hub Middle East's freelance DJs, vocalists and performers across Dubai"
                 className="w-full h-auto rounded-xl"
                 style={{
                   filter: 'contrast(1.05) saturate(1.1) brightness(0.95)'
@@ -334,7 +334,7 @@ export function About() {
             {/* Caption */}
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground italic">
-                "Diverse voices, backgrounds, and styles — one carefully curated roster"
+                "Curated freelance artists — matched to your room, your clientele, your tempo"
               </p>
             </div>
           </div>

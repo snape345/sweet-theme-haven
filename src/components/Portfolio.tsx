@@ -12,17 +12,17 @@ export function Portfolio() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Featured Talent
+              The Roster
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">Our Roster in Action</span>
+            <span className="block mb-2">Nights that feel effortless.</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            A recent campaign starring one of our represented creators — proof that the right talent turns a brief into a moment.
+            A short reel of the sound and energy our freelance DJs, vocalists and performers bring to Dubai's rooms.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export function Portfolio() {
               <div className="aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/fIbDWDh6aYw?rel=0&showinfo=0&modestbranding=1"
-                  title="Featured Talent Hub campaign"
+                  title="Talent Hub Middle East — mood reel"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -45,7 +45,7 @@ export function Portfolio() {
               {/* Floating Status Badge */}
               <div className="absolute top-6 right-6">
                 <span className="glass-effect rounded-xl px-4 py-2 text-sm font-medium text-white backdrop-blur-md">
-                  Latest Campaign
+                  Mood Reel
                 </span>
               </div>
             </div>
@@ -55,37 +55,37 @@ export function Portfolio() {
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="bg-accent-purple/10 text-accent-purple px-3 py-1 rounded-full text-sm font-medium">
-                    Brand Campaign
+                    Venue Programming
                   </span>
                   <span className="text-sm text-muted-foreground">
-                    Client: Hampton
+                    Dubai · Hospitality
                   </span>
                 </div>
                 
                 <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  The Lonely Journey
+                  Sunset to Sunrise
                 </h3>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  A campaign led by one of our represented creators, exploring the isolation founders face and the power of community. Talent Hub paired the right voice with the right brief — from casting to on-set delivery.
+                  A snapshot of the tempo we source for — open-format DJs at golden hour, a live vocalist over dinner, a specialty performer as the room shifts. One point of contact from brief to booking.
                 </p>
                 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                   <div>
-                    <span className="text-muted-foreground block">Category</span>
-                    <span className="font-medium">Creator Campaign</span>
+                    <span className="text-muted-foreground block">Format</span>
+                    <span className="font-medium">DJ · Vocalist · Dancer</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground block">Talent</span>
-                    <span className="font-medium">Signed Roster</span>
+                    <span className="text-muted-foreground block">Venues</span>
+                    <span className="font-medium">Hotels · Lounges · Beach Clubs</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground block">Deliverable</span>
-                    <span className="font-medium">Hero Spot + Cutdowns</span>
+                    <span className="text-muted-foreground block">Model</span>
+                    <span className="font-medium">Freelance Sourcing</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground block">Reach</span>
-                    <span className="font-medium">Multi-platform</span>
+                    <span className="text-muted-foreground block">Location</span>
+                    <span className="font-medium">Dubai, UAE</span>
                   </div>
                 </div>
               </div>

@@ -29,17 +29,17 @@ export function Contact() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Let's Work Together
+              A Quiet Conversation
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">Book Talent. Build Campaigns.</span>
+            <span className="block mb-2">Source Talent. Programme Nights.</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Tell us about your brand, brief, or budget — we'll come back with a shortlist and a plan.
+            Tell us about your venue, dates and the mood you have in mind — we'll come back with a shortlist.
           </p>
         </div>
 
@@ -50,15 +50,15 @@ export function Contact() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xl font-black text-foreground mb-1">
-                    Get In Touch
+                    Enquire
                   </h3>
                   <p className="text-muted-foreground">
-                    Fill out the form and we'll respond within 24 hours
+                    Share your brief — a single point of contact will reply discreetly
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
                   <div className="w-3 h-3 bg-accent-emerald rounded-full" />
-                  <span className="text-sm text-muted-foreground font-medium">Available now</span>
+                  <span className="text-sm text-muted-foreground font-medium">Launching soon · Dubai</span>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ export function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                   className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Venue, dates, mood — anything you'd like us to know"
                 />
               </div>
               <button
@@ -107,7 +107,7 @@ export function Contact() {
                 disabled={isSubmitting}
                 className="w-full py-4 rounded-xl bg-foreground text-background font-black text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Sending...' : 'Submit Enquiry'}
               </button>
             </form>
           </div>
@@ -120,9 +120,9 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-blue rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Brief Us</h4>
+              <h4 className="font-black text-foreground mb-2">Inquire</h4>
               <p className="text-muted-foreground text-sm">
-                Share your goals, audience, timeline, and budget
+                Share your venue, dates and the mood you have in mind
               </p>
             </div>
             
@@ -130,9 +130,9 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-emerald rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Get a Shortlist</h4>
+              <h4 className="font-black text-foreground mb-2">Get Matched</h4>
               <p className="text-muted-foreground text-sm">
-                We match you with talent that fits — usually within 48 hours
+                A shortlist of freelance DJs, vocalists, dancers or performers
               </p>
             </div>
             
@@ -140,9 +140,9 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-purple rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Book & Launch</h4>
+              <h4 className="font-black text-foreground mb-2">Coordinate</h4>
               <p className="text-muted-foreground text-sm">
-                Contracts, production, delivery — handled end-to-end
+                Introductions, timing and light online promotion — no online payments
               </p>
             </div>
           </div>

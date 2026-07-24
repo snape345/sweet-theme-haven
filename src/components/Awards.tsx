@@ -51,17 +51,17 @@ export function Awards() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-purple rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Press & Recognition
+              Trusted Across Dubai
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
-            Featured & Awarded
+            Programmed for the city's finest rooms
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Our talent and campaigns celebrated by the industry
+            Freelance artists we source play hotels, beach clubs, rooftops, lounges and private venues across the UAE.
           </p>
         </div>
 
