@@ -33,6 +33,14 @@ export function Services() {
       image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=400&h=300&fit=crop&auto=format'
     },
     {
+      id: 'violinist-sourcing',
+      title: "Violinist & Instrumentalist Sourcing",
+      description: "Solo violinists and instrumental ensembles for upscale dining, lounge ambience and signature venue moments.",
+      color: 'accent-emerald',
+      rotation: '-rotate-2',
+      image: 'https://images.unsplash.com/photo-1465821185615-5b4c38c6bda2?w=400&h=300&fit=crop&auto=format'
+    },
+    {
       id: 'online-promotion',
       title: "Online Promotion",
       description: "Discreet social-media promotion for talent and venue collaborations — thoughtfully produced content that respects your brand.",
@@ -408,7 +416,7 @@ export function Services() {
             
             {/* Photos hanging from second line */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
-              {services.slice(3, 6).map((service, index) => (
+              {services.slice(3, 7).map((service, index) => (
                 <div
                   key={service.id}
                   className={`transform transition-all duration-700 ${

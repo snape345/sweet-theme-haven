@@ -7,8 +7,9 @@ import heroBg from '../assets/hero-bg.mp4.asset.json'
 import heroSinger from '../assets/hero-singer.mp4.asset.json'
 import heroDancerHiphop from '../assets/hero-dancer-hiphop.mp4.asset.json'
 import heroDancerSalsa from '../assets/hero-dancer-salsa.mp4.asset.json'
+import heroViolinist from '../assets/hero-violinist.mp4.asset.json'
 
-const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url]
+const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url, heroViolinist.url]
 
 export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
@@ -302,7 +303,7 @@ export function Hero() {
             <span className="block">FINEST VENUES</span>
           </h1>
           <p className="mt-4 text-white/80 text-base sm:text-lg max-w-xl">
-            Freelance DJs, vocalists, dancers and performers — sourced discreetly for hotels, lounges and beach clubs across Dubai.
+            Freelance DJs, vocalists, dancers, violinists and performers — sourced discreetly for hotels, lounges and beach clubs across Dubai.
           </p>
         </div>
       </motion.div>
