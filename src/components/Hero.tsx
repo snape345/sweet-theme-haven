@@ -7,8 +7,9 @@ import heroBg from '../assets/hero-bg.mp4.asset.json'
 import heroSinger from '../assets/hero-singer.mp4.asset.json'
 import heroDancerHiphop from '../assets/hero-dancer-hiphop.mp4.asset.json'
 import heroDancerSalsa from '../assets/hero-dancer-salsa.mp4.asset.json'
+import heroViolinist from '../assets/hero-violinist.mp4.asset.json'
 
-const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url]
+const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url, heroViolinist.url]
 
 export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
