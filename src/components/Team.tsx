@@ -242,7 +242,7 @@ export function Team() {
                                     fontFamily: 'serif',
                                     letterSpacing: '0.1em'
                                   }}>
-                                WANTED
+                                TEAM
                               </h3>
                               <div className="w-full h-0.5 bg-black mb-2" />
                             </div>
@@ -330,7 +330,7 @@ export function Team() {
                                     fontFamily: 'serif',
                                     letterSpacing: '0.1em'
                                   }}>
-                                WANTED
+                                TEAM
                               </h3>
                               <div className="w-full h-0.5 bg-black mb-2" />
                             </div>
