@@ -4,11 +4,16 @@ import { motion } from 'framer-motion'
 import { Volume2, VolumeX, Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import heroBg from '../assets/hero-bg.mp4.asset.json'
+import heroSinger from '../assets/hero-singer.mp4.asset.json'
+import heroDancer from '../assets/hero-dancer.mp4.asset.json'
+
+const heroVideos = [heroBg.url, heroSinger.url, heroDancer.url]
 
 export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [videoIndex, setVideoIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   // Scroll detection
@@ -102,13 +107,14 @@ export function Hero() {
       {/* MASSIVE VIDEO - Takes up 95% of space */}
       <video
         ref={videoRef}
+        key={heroVideos[videoIndex]}
         className="absolute inset-0 w-full h-full object-cover scale-110"
         autoPlay
         muted
-        loop
         playsInline
+        onEnded={() => setVideoIndex((i) => (i + 1) % heroVideos.length)}
       >
-        <source src={heroBg.url} type="video/mp4" />
+        <source src={heroVideos[videoIndex]} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
