@@ -303,7 +303,7 @@ export function Hero() {
             <span className="block">FINEST VENUES</span>
           </h1>
           <p className="mt-4 text-white/80 text-base sm:text-lg max-w-xl">
-            Freelance DJs, vocalists, dancers and performers — sourced discreetly for hotels, lounges and beach clubs across Dubai.
+            Freelance DJs, vocalists, dancers, violinists and performers — sourced discreetly for hotels, lounges and beach clubs across Dubai.
           </p>
         </div>
       </motion.div>
