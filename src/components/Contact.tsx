@@ -1,149 +1,196 @@
-import { useState } from 'react'
-import { useToast } from '@/hooks/use-toast'
+'use client'
 
-export function Contact() {
-  const { toast } = useToast()
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+import { useState, type FormEvent } from 'react'
+import { Send, Check, MessageCircle, Mail, MapPin } from 'lucide-react'
 
-  const handleSubmit = (e: React.FormEvent) => {
+function Field({
+  label,
+  name,
+  type = 'text',
+  required,
+  as = 'input',
+  rows,
+  children,
+}: {
+  label: string
+  name: string
+  type?: string
+  required?: boolean
+  as?: 'input' | 'textarea' | 'select'
+  rows?: number
+  children?: React.ReactNode
+}) {
+  const base =
+    'w-full bg-transparent border-b border-border px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold transition-colors'
+  return (
+    <label className="block">
+      <span className="eyebrow block mb-1">
+        {label}
+        {required && ' *'}
+      </span>
+      {as === 'textarea' ? (
+        <textarea name={name} rows={rows} required={required} className={base + ' resize-none'} />
+      ) : as === 'select' ? (
+        <select name={name} className={base + ' appearance-none'}>
+          {children}
+        </select>
+      ) : (
+        <input type={type} name={name} required={required} className={base} />
+      )}
+    </label>
+  )
+}
+
+function ContactForm() {
+  const [sent, setSent] = useState(false)
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      toast({ title: 'Please fill in all fields', variant: 'destructive' })
-      return
-    }
-    setIsSubmitting(true)
-    // Simulate submission — connect to a backend to actually send
-    setTimeout(() => {
-      toast({ title: 'Message sent!', description: "We'll get back to you soon." })
-      setFormData({ name: '', email: '', message: '' })
-      setIsSubmitting(false)
-    }, 1000)
+    setSent(true)
+  }
+
+  if (sent) {
+    return (
+      <div className="border border-gold/40 bg-surface/40 p-10 text-center">
+        <div className="mx-auto grid h-14 w-14 place-items-center rounded-full border border-gold text-gold">
+          <Check size={22} />
+        </div>
+        <h3 className="mt-6 font-display text-2xl">Thank you</h3>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Your enquiry has been noted. A member of our team will reach out discreetly at launch.
+        </p>
+      </div>
+    )
   }
 
   return (
-    <section id="contact" className="relative py-32 bg-card/30">
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
-            <span className="text-sm font-semibold text-muted-foreground">
-              Let's Work Together
-            </span>
-            <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
+    <form onSubmit={onSubmit} className="space-y-6">
+      <div className="grid gap-6 md:grid-cols-2">
+        <Field label="Full Name" name="name" required />
+        <Field label="Company / Venue" name="company" />
+      </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        <Field label="Email" name="email" type="email" required />
+        <Field label="Phone / WhatsApp" name="phone" />
+      </div>
+      <Field label="Interest" name="interest" as="select">
+        <option value="dj">DJ Sourcing</option>
+        <option value="singer">Singer Sourcing</option>
+        <option value="both">DJ &amp; Singer</option>
+        <option value="promotion">Online Promotion</option>
+        <option value="other">Other</option>
+      </Field>
+      <Field label="Message" name="message" as="textarea" rows={5} />
+
+      <button type="submit" className="btn-gold w-full md:w-auto">
+        <Send size={14} /> Submit Enquiry
+      </button>
+      <p className="text-xs text-muted-foreground">
+        By submitting, you consent to be contacted regarding your enquiry. No payment or booking is
+        processed.
+      </p>
+    </form>
+  )
+}
+
+function InfoRow({
+  icon,
+  label,
+  value,
+  href,
+}: {
+  icon: React.ReactNode
+  label: string
+  value: string
+  href?: string
+}) {
+  const content = (
+    <div className="flex items-start gap-4">
+      <span className="grid h-10 w-10 place-items-center border border-gold/60 text-gold shrink-0">
+        {icon}
+      </span>
+      <div className="min-w-0">
+        <p className="eyebrow">{label}</p>
+        <p className="mt-1 text-sm text-foreground/85">{value}</p>
+      </div>
+    </div>
+  )
+  return href ? (
+    <a
+      href={href}
+      target={href.startsWith('http') ? '_blank' : undefined}
+      rel="noreferrer"
+      className="block hover:text-gold transition-colors"
+    >
+      {content}
+    </a>
+  ) : (
+    content
+  )
+}
+
+export function Contact() {
+  return (
+    <section className="relative">
+      <div className="border-y border-border py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-10 bg-gold" />
+            <span className="eyebrow">Contact</span>
           </div>
-          
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">Book Talent. Build Campaigns.</span>
+          <h2 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] tracking-tight lg:text-7xl">
+            A quiet conversation.
           </h2>
-          
-          <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Tell us about your brand, brief, or budget — we'll come back with a shortlist and a plan.
+          <p className="mt-6 max-w-xl text-base text-muted-foreground lg:text-lg">
+            Share the details of your venue or programming. We'll reach out discreetly at launch.
           </p>
         </div>
+      </div>
 
-        {/* Contact Form */}
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-background clean-border rounded-3xl overflow-hidden elevated-shadow">
-            <div className="bg-card/50 px-8 py-6 border-b border-border">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-black text-foreground mb-1">
-                    Get In Touch
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Fill out the form and we'll respond within 24 hours
-                  </p>
-                </div>
-                <div className="hidden sm:flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-accent-emerald rounded-full" />
-                  <span className="text-sm text-muted-foreground font-medium">Available now</span>
-                </div>
-              </div>
-            </div>
-            
-            <form onSubmit={handleSubmit} className="p-8 space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">Name</label>
-                  <input
-                    id="name"
-                    type="text"
-                    maxLength={100}
-                    value={formData.name}
-                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">Email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    maxLength={255}
-                    value={formData.email}
-                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">Message</label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  maxLength={1000}
-                  value={formData.message}
-                  onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all resize-none"
-                  placeholder="Tell us about your project..."
+      <div className="py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="grid gap-16 lg:grid-cols-[0.9fr_1.3fr]">
+            <div>
+              <span className="eyebrow">Direct</span>
+              <h3 className="mt-4 font-display text-4xl lg:text-5xl leading-tight">
+                Reach us on your terms.
+              </h3>
+              <p className="mt-6 text-sm leading-relaxed text-muted-foreground max-w-sm">
+                No agents, no tickets. A single point of contact for all enquiries — reachable by
+                form, email or WhatsApp.
+              </p>
+
+              <div className="mt-12 space-y-6">
+                <InfoRow icon={<MapPin size={16} />} label="Based" value="Dubai, United Arab Emirates" />
+                <InfoRow
+                  icon={<Mail size={16} />}
+                  label="Email"
+                  value="hello@talenthub.me"
+                  href="mailto:hello@talenthub.me"
+                />
+                <InfoRow
+                  icon={<MessageCircle size={16} />}
+                  label="WhatsApp"
+                  value="Message the concierge"
+                  href="https://wa.me/971500000000"
                 />
               </div>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-foreground text-background font-black text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
-          </div>
-        </div>
 
-        {/* Bottom Info */}
-        <div className="text-center mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
-              <div className="w-12 h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-6 h-6 bg-accent-blue rounded-full" />
+              <div className="mt-12 border-l-2 border-gold/60 pl-5 py-2">
+                <p className="text-xs tracking-[0.2em] uppercase text-gold">Please note</p>
+                <p className="mt-2 text-sm text-muted-foreground max-w-sm leading-relaxed">
+                  No payments or bookings are processed online. This site is for informational and
+                  lead-inquiry purposes only.
+                </p>
               </div>
-              <h4 className="font-black text-foreground mb-2">Brief Us</h4>
-              <p className="text-muted-foreground text-sm">
-                Share your goals, audience, timeline, and budget
-              </p>
             </div>
-            
-            <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
-              <div className="w-12 h-12 bg-accent-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-6 h-6 bg-accent-emerald rounded-full" />
+
+            <div className="border border-border bg-surface/40 p-8 lg:p-12">
+              <span className="eyebrow">Enquiry Form</span>
+              <h3 className="mt-3 font-display text-3xl">Tell us about your venue.</h3>
+              <div className="mt-8">
+                <ContactForm />
               </div>
-              <h4 className="font-black text-foreground mb-2">Get a Shortlist</h4>
-              <p className="text-muted-foreground text-sm">
-                We match you with talent that fits — usually within 48 hours
-              </p>
-            </div>
-            
-            <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
-              <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-6 h-6 bg-accent-purple rounded-full" />
-              </div>
-              <h4 className="font-black text-foreground mb-2">Book & Launch</h4>
-              <p className="text-muted-foreground text-sm">
-                Contracts, production, delivery — handled end-to-end
-              </p>
             </div>
           </div>
         </div>
