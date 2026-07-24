@@ -237,7 +237,7 @@ export function Hero() {
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Process
+                How It Works
               </a>
               <a 
                 href="#services" 
