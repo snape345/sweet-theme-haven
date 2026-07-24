@@ -1,154 +1,305 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { Menu, X, ArrowRight } from 'lucide-react'
-import { LogoMark } from './LogoMark'
-
-const nav = [
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#contact', label: 'Contact' },
-]
+import { motion } from 'framer-motion'
+import { Volume2, VolumeX, Menu, X } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
 
 export function Hero() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
+  // Scroll detection
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50) // Show background after 50px scroll
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Ensure video is muted immediately on load to prevent any audio
+  useEffect(() => {
+    if (videoRef.current) {
+      console.log('Video element found, setting up...')
+      videoRef.current.volume = 0
+      videoRef.current.muted = true
+      videoRef.current.defaultMuted = true
+      
+      // Add event listeners for debugging
+      videoRef.current.addEventListener('loadstart', () => console.log('Video: loadstart'))
+      videoRef.current.addEventListener('loadedmetadata', () => console.log('Video: loadedmetadata'))
+      videoRef.current.addEventListener('canplay', () => console.log('Video: canplay'))
+      videoRef.current.addEventListener('playing', () => console.log('Video: playing'))
+      videoRef.current.addEventListener('error', (e) => console.error('Video error:', e))
+      
+      // Force mute on play
+      videoRef.current.addEventListener('play', () => {
+        if (videoRef.current) {
+          console.log('Video play event fired')
+          videoRef.current.muted = isMuted
+          videoRef.current.volume = isMuted ? 0 : 0.7
+        }
+      })
+      
+      // Try to play the video
+      const playPromise = videoRef.current.play()
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => console.log('Video autoplay successful'))
+          .catch(error => console.error('Video autoplay failed:', error))
+      }
+    }
+  }, [])
+
+  // Update video mute state when isMuted changes
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = isMuted
+      videoRef.current.volume = isMuted ? 0 : 0.7
+    }
+  }, [isMuted])
+
+  // Handle body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
+
+  // Close mobile menu on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      window.addEventListener('scroll', handleScroll)
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isMobileMenuOpen])
+
+
+
   return (
-    <>
-      <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm'
-            : 'bg-background/80 backdrop-blur-sm border-b border-border/60'
-        }`}
+    <div className="relative h-screen w-full overflow-hidden bg-black">
+      {/* MASSIVE VIDEO - Takes up 95% of space */}
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover scale-110"
+        autoPlay
+        muted
+        loop
+        playsInline
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <a href="#hero" className="group flex items-center gap-3">
-            <LogoMark className="text-gold" size={36} />
-            <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg tracking-wide">Talent Hub</span>
-              <span className="text-[0.6rem] tracking-[0.35em] text-gold uppercase">Middle East</span>
-            </span>
-          </a>
+        <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
-          <nav className="hidden lg:flex items-center gap-10">
-            {nav.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                className="text-xs tracking-[0.22em] uppercase text-foreground/75 hover:text-gold transition-colors"
-              >
-                {n.label}
-              </a>
-            ))}
-          </nav>
+      {/* Full-Width Navbar */}
+      <motion.nav
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="fixed top-0 left-0 right-0 w-full z-[110]"
+      >
+        <div 
+          className={`w-full px-6 sm:px-8 lg:px-12 py-4 transition-all duration-300 ease-out ${
+            isScrolled 
+              ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
+              : 'bg-transparent'
+          }`}
+        >
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center cursor-pointer"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              <span className="font-bagel text-white text-xl tracking-wider">TALENT HUB ME</span>
+            </motion.div>
 
-          <a href="#contact" className="hidden lg:inline-flex btn-outline-gold text-[0.7rem] px-5 py-2.5">
-            Enquire
-          </a>
+            {/* Navigation Menu */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#portfolio" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Roster</a>
+              <a href="#about" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">How It Works</a>
+              <a href="#services" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Services</a>
+              <a href="#team" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Team</a>
+              <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Enquire</a>
+            </div>
 
-          <button
-            className="lg:hidden text-gold"
-            onClick={() => setOpen((o) => !o)}
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
-
-        {open && (
-          <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-md">
-            <div className="flex flex-col px-6 py-6 gap-5">
-              {nav.map((n) => (
-                <a
-                  key={n.href}
-                  href={n.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm tracking-[0.22em] uppercase text-foreground/80"
+            {/* Right Side - Video Controls + CTA + Mobile Menu */}
+            <div className="flex items-center space-x-3 relative">
+              {/* Video Controls with Sound On indicator */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsMuted(!isMuted)}
+                  className="glass-effect p-3 rounded-full text-white hover:bg-white/20 gentle-animation cursor-pointer"
                 >
-                  {n.label}
-                </a>
-              ))}
-              <a href="#contact" onClick={() => setOpen(false)} className="btn-outline-gold mt-2 self-start">
+                  {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                </button>
+                
+                {/* Sound On indicator - only show when muted */}
+                {isMuted && (
+                  <div className="absolute -bottom-10 right-0 flex items-center text-white/80">
+                    <span className="whitespace-nowrap font-medium text-sm mr-2">Sound On</span>
+                    <span className="text-lg">↗</span>
+                  </div>
+                )}
+              </div>
+              
+              {/* CTA Button - Hidden on mobile */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact')
+                  contactSection?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
+              >
                 Enquire
-              </a>
-            </div>
-          </div>
-        )}
-      </header>
+              </motion.button>
 
-      <section className="relative min-h-screen w-full overflow-hidden bg-background">
-        <div className="relative z-10 mx-auto flex min-h-screen max-w-[1500px] flex-col justify-between px-6 pt-32 pb-14 lg:px-12">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs tracking-[0.28em] uppercase text-muted-foreground">
-            <span className="eyebrow">Launching Soon · Dubai, UAE</span>
-            <span className="hidden sm:inline">Est. 2026 / Talent Sourcing Concept</span>
-          </div>
-
-          <div className="py-16 lg:py-8">
-            <h1 className="font-sans font-black uppercase leading-[0.92] tracking-[-0.03em] text-[12vw] sm:text-[10vw] lg:text-[8vw]">
-              <span className="block">Talent</span>
-              <span className="block">
-                <span className="italic font-display font-normal normal-case tracking-tight gold-text">for </span>
-                Dubai's
-              </span>
-              <span className="block">finest venues.</span>
-            </h1>
-          </div>
-
-          <div className="grid gap-10 border-t border-border pt-10 md:grid-cols-[1.2fr_1fr_auto] md:items-end">
-            <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:text-base">
-              A discreet sourcing concept connecting hotels, lounges and beach clubs with freelance
-              DJs, singers, dancers and performers — supported by online promotion and thoughtful
-              booking coordination.
-            </p>
-
-            <div className="text-sm">
-              <p className="eyebrow mb-3">Focus</p>
-              <p className="font-display text-2xl leading-tight">
-                DJs, vocalists, dancers and premium coordination.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <a href="#contact" className="btn-gold">
-                Enquire <ArrowRight size={14} />
-              </a>
-              <a href="#services" className="btn-outline-gold">Services</a>
+              {/* Mobile Hamburger Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden glass-effect p-3 rounded-full text-white hover:bg-white/20 active:bg-white/30 gentle-animation cursor-pointer z-[120] relative"
+              >
+                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </motion.nav>
 
-      {/* Marquee */}
-      <section className="relative overflow-hidden border-y border-border bg-ink py-8 text-ink-foreground">
-        <div className="flex whitespace-nowrap animate-marquee">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex shrink-0 items-center gap-10 pr-10 font-display text-4xl lg:text-6xl">
-              <span>DJ Sourcing</span>
-              <span className="text-gold">✦</span>
-              <span className="italic">Vocalist Introductions</span>
-              <span className="text-gold">✦</span>
-              <span>Dancer &amp; Performer Sourcing</span>
-              <span className="text-gold">✦</span>
-              <span>Online Promotion</span>
-              <span className="text-gold">✦</span>
-              <span className="italic">Booking Coordination</span>
-              <span className="text-gold">✦</span>
-              <span>Dubai Native</span>
-              <span className="text-gold">✦</span>
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-md z-[80] cursor-pointer"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu Panel */}
+      <motion.div
+        initial={{ x: '100%' }}
+        animate={{ x: isMobileMenuOpen ? '0%' : '100%' }}
+        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        className="md:hidden fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-black/90 backdrop-blur-xl border-l border-white/10 z-[90] mobile-menu-panel pointer-events-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex flex-col h-full">
+          {/* Close Button at the top */}
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="glass-effect p-3 rounded-full text-white hover:bg-white/20 active:bg-white/30 gentle-animation cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+          
+          <div className="flex flex-col px-6 pb-6 h-full">
+            {/* Mobile Navigation Links */}
+            <div className="flex flex-col space-y-4 text-white">
+              <a 
+                href="#portfolio" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Roster
+              </a>
+              <a 
+                href="#about" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                How It Works
+              </a>
+              <a 
+                href="#services" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                href="#team" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Team
+              </a>
+              <a 
+                href="#contact" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
             </div>
-          ))}
+
+            {/* Mobile CTA Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const contactSection = document.getElementById('contact')
+                contactSection?.scrollIntoView({ behavior: 'smooth' })
+                setIsMobileMenuOpen(false)
+              }}
+              className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
+            >
+              Enquire
+            </motion.button>
+          </div>
         </div>
-      </section>
-    </>
+      </motion.div>
+
+
+
+      {/* Big Studio Title - Lower Left */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
+      >
+        <div className="max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white">
+            <span className="block">TALENT FOR DUBAI'S</span>
+            <span className="block">FINEST VENUES</span>
+          </h1>
+          <p className="mt-4 text-white/80 text-base sm:text-lg max-w-xl">
+            Freelance DJs, vocalists, dancers and performers — sourced discreetly for hotels, lounges and beach clubs across Dubai.
+          </p>
+        </div>
+      </motion.div>
+
+
+    </div>
   )
 }

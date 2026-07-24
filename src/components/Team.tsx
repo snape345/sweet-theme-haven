@@ -1,91 +1,386 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
-
-const steps = [
-  {
-    n: '01',
-    t: 'Inquire',
-    c: 'Share your venue, upcoming dates and the mood you have in mind through a short enquiry form or a direct WhatsApp message. There are no fees or commitments at this stage.',
-    detail: 'Every enquiry is handled by a single point of contact — no ticket queues, no forwarded threads.',
-  },
-  {
-    n: '02',
-    t: 'Get Matched',
-    c: 'We prepare a shortlist of suitable freelance DJs, vocalists, dancers or performers, with references, sample sets and clear availability. You review at your own pace.',
-    detail: 'Shortlists are shaped around your clientele, room format and programming rhythm.',
-  },
-  {
-    n: '03',
-    t: 'Coordinate',
-    c: "Once you've selected, we introduce you directly to the artist and coordinate logistics, timing and light online promotion — leaving all commercial terms to you and the artist.",
-    detail: 'No online payments or booking transactions are processed through Talent Hub Middle East.',
-  },
-]
+import { ImageWithFallback } from './figma/ImageWithFallback'
+import marcusPhoto from '../assets/team-member-1.png'
+import sofiaPhoto from '../assets/team-member-2.png'
+import jakePhoto from '../assets/team-member-3.png'
+import mayaPhoto from '../assets/team-member-4.png'
+import connorPhoto from '../assets/team-member-5.png'
+import zaraPhoto from '../assets/team-member-6.png'
+import leoPhoto from '../assets/team-member-7.png'
 
 export function Team() {
+  const wantedCriminals = [
+    {
+      name: "Rami Haddad",
+      crime: "FOUNDER · DUBAI",
+      bounty: "Concept lead",
+      description: "Building Talent Hub Middle East as a single point of contact between Dubai's premium venues and the freelance artists who elevate them.",
+      image: marcusPhoto,
+      rotation: 'rotate-3',
+      mustacheStyle: "artistic"
+    },
+    {
+      name: "Layla Fahmy",
+      crime: "HEAD OF TALENT",
+      bounty: "Roster & scouting",
+      description: "Curates the roster of freelance DJs, vocalists and performers — vetted through Dubai's hospitality circles, matched by room, format and mood.",
+      image: sofiaPhoto,
+      rotation: 'rotate-2',
+      mustacheStyle: "handlebar"
+    },
+    {
+      name: "Karim Nasser",
+      crime: "VENUE PARTNERSHIPS",
+      bounty: "Hotels · Beach Clubs",
+      description: "Runs point with hotels, lounges and beach clubs — briefs, calendars and the quiet coordination that keeps a programme feeling seamless.",
+      image: jakePhoto,
+      rotation: 'rotate-2',
+      mustacheStyle: "thick"
+    },
+    {
+      name: "Amira Zayed",
+      crime: "MUSIC DIRECTOR",
+      bounty: "DJs · Vocalists",
+      description: "Shapes the sonic identity of every room we programme — from open-format sunset sets to late-night residencies and live vocal nights.",
+      image: mayaPhoto,
+      rotation: '-rotate-2',
+      mustacheStyle: "curly"
+    },
+    {
+      name: "Omar Khalil",
+      crime: "BOOKING COORDINATOR",
+      bounty: "Logistics · Timing",
+      description: "The one keeping bookings on time and on brief. Introductions, availability, backline notes — handled quietly by a single point of contact.",
+      image: connorPhoto,
+      rotation: 'rotate-1',
+      mustacheStyle: "villainous"
+    },
+    {
+      name: "Nadia Rahman",
+      crime: "ONLINE PROMOTION",
+      bounty: "Social · Editorial",
+      description: "Discreet social-media promotion for artists and venue collaborations. Thoughtful content that respects the brand of the room.",
+      image: zaraPhoto,
+      rotation: '-rotate-1',
+      mustacheStyle: "artistic"
+    },
+    {
+      name: "Samir Youssef",
+      crime: "PERFORMER RELATIONS",
+      bounty: "Dancers · Specialty",
+      description: "Represents dancers and specialty performers on the roster — availability, rehearsal, wardrobe and the small details that raise a night.",
+      image: leoPhoto,
+      rotation: 'rotate-3',
+      mustacheStyle: "handlebar"
+    }
+  ]
+
+  const Mustache = ({ style, className }: { style: string, className?: string }) => {
+    const mustaches = {
+      handlebar: "M12 16c-2 0-3-1-4-1s-2 1-4 1c0-1 1-2 4-2s4 1 4 2z M12 16c2 0 3-1 4-1s2 1 4 1c0-1-1-2-4-2s-4 1-4 2z",
+      thick: "M6 16c0-1 2-2 6-2s6 1 6 2c0 1-2 1-6 1s-6 0-6-1z",
+      villainous: "M8 15c-1 0-2 1-2 2s1 1 2 0c1-1 2-1 4-1s3 0 4 1c1 1 2 0 2-1s-1-2-2-2c-2 0-4 1-8 1z",
+      curly: "M6 16c0-2 1-2 2-1s1 1 2 0 1-1 2 0 1-1 2 0 2-1 2 1c0 1-1 1-2 1s-2 0-4 0-4 0-4-1z",
+      artistic: "M7 15c-1 1-1 2 0 2s2-1 3-1h4c1 0 2 1 3 1s1-1 0-2c-1-1-2-1-5-1s-4 0-5 1z"
+    }
+    
+    return (
+      <svg 
+        className={`absolute ${className}`}
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="none"
+      >
+        <path 
+          d={mustaches[style as keyof typeof mustaches]} 
+          fill="#2D1810" 
+          stroke="#1A0F08" 
+          strokeWidth="0.5"
+        />
+      </svg>
+    )
+  }
+
   return (
-    <section id="how-it-works" className="relative">
-      <div className="border-b border-border py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="flex items-center gap-3">
-            <span className="h-px w-10 bg-gold" />
-            <span className="eyebrow">How It Works</span>
+    <div className="relative py-32 bg-background w-full" style={{ 
+      overflow: 'visible', 
+      height: 'auto', 
+      minHeight: '0', 
+      maxHeight: 'none' 
+    }}>
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12" style={{ 
+        overflow: 'visible', 
+        height: 'auto', 
+        minHeight: '0', 
+        maxHeight: 'none' 
+      }}>
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 mb-6">
+            <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
+            <span className="text-sm font-semibold text-muted-foreground">
+              Meet the Team
+            </span>
+            <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-          <h2 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] tracking-tight lg:text-7xl">
-            Three steps. Quietly done.
+          
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
+            <span className="block mb-2">The people behind</span>
+            <span className="block text-foreground">TALENT HUB ME</span>
           </h2>
-          <p className="mt-6 max-w-xl text-base text-muted-foreground lg:text-lg">
-            A human, considered flow — designed around the tempo of premium hospitality.
+          
+          <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Scouts, coordinators and strategists working for Dubai's finest rooms
           </p>
         </div>
-      </div>
 
-      <div className="py-24 lg:py-32">
-        <div className="mx-auto max-w-5xl px-6 lg:px-10">
-          <ol className="space-y-20">
-            {steps.map((s, i) => (
-              <li key={s.n} className="grid gap-8 md:grid-cols-[auto_1fr] md:gap-14">
-                <div className="flex md:flex-col md:items-start gap-4">
-                  <span className="font-display text-6xl md:text-8xl text-gold/50 leading-none">
-                    {s.n}
-                  </span>
-                  {i < steps.length - 1 && (
-                    <span className="hidden md:block mt-6 h-40 w-px bg-gradient-to-b from-gold/50 to-transparent" />
-                  )}
-                </div>
-                <div className="border-t border-gold/30 pt-6">
-                  <h3 className="font-display text-4xl lg:text-5xl">{s.t}</h3>
-                  <p className="mt-5 text-base leading-relaxed text-foreground/80 max-w-xl">
-                    {s.c}
-                  </p>
-                  <p className="mt-5 text-sm italic text-muted-foreground max-w-xl">{s.detail}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+        {/* Framed Wanted Board */}
+        <div className="max-w-7xl mx-auto" style={{ 
+          overflow: 'visible', 
+          height: 'auto', 
+          minHeight: '0', 
+          maxHeight: 'none' 
+        }}>
+          <div className="relative" style={{ 
+            overflow: 'visible', 
+            height: 'auto', 
+            minHeight: '0', 
+            maxHeight: 'none' 
+          }}>
+            
+            {/* Black Frame */}
+            <div className="bg-gradient-to-br from-black via-gray-900 to-black p-8 rounded-2xl shadow-2xl relative border border-gray-800/50" style={{ 
+              overflow: 'visible', 
+              height: 'auto', 
+              minHeight: '0', 
+              maxHeight: 'none' 
+            }}>
+              
+              {/* Black frame texture */}
+              <div className="absolute inset-0 opacity-15"
+                   style={{
+                     backgroundImage: `
+                       linear-gradient(135deg, rgba(55, 65, 81, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.2) 100%),
+                       radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                       radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.15) 0%, transparent 50%)
+                     `,
+                     backgroundSize: '60px 60px, 100px 100px, 80px 80px'
+                   }} />
+              
+              {/* Modern Board Background */}
+              <div className="bg-gradient-to-br from-slate-100 via-gray-50 to-slate-200 rounded-xl p-8 relative border border-slate-300/50" style={{ 
+                overflow: 'visible', 
+                height: 'auto', 
+                minHeight: '0', 
+                maxHeight: 'none' 
+              }}>
+                
+                {/* Modern subtle texture */}
+                <div className="absolute inset-0 opacity-30"
+                     style={{
+                       backgroundImage: `
+                         radial-gradient(circle at 30% 30%, rgba(71, 85, 105, 0.03) 1px, transparent 1px),
+                         radial-gradient(circle at 70% 70%, rgba(148, 163, 184, 0.02) 1px, transparent 1px),
+                         linear-gradient(135deg, rgba(226, 232, 240, 0.1) 0%, transparent 50%, rgba(241, 245, 249, 0.1) 100%)
+                       `,
+                       backgroundSize: '30px 30px, 45px 45px, 100% 100%'
+                     }} />
 
-          <div className="mt-24 border-t border-border pt-16 text-center">
-            <span className="eyebrow">Ready?</span>
-            <h3 className="mt-4 font-display text-3xl lg:text-4xl">
-              Begin your enquiry in under two minutes.
-            </h3>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <a href="#contact" className="btn-gold">
-                Enquire Now <ArrowRight size={14} />
-              </a>
-              <a
-                href="https://wa.me/971500000000"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-outline-gold"
-              >
-                WhatsApp
-              </a>
+                {/* Wanted Posters Grid */}
+                <div className="relative z-10" style={{ 
+                  overflow: 'visible', 
+                  height: 'auto', 
+                  minHeight: '0', 
+                  maxHeight: 'none' 
+                }}>
+                  {/* First row - 4 posters */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-8" style={{ 
+                    overflow: 'visible', 
+                    height: 'auto', 
+                    minHeight: '0', 
+                    maxHeight: 'none' 
+                  }}>
+                    {wantedCriminals.slice(0, 4).map((criminal, index) => (
+                      <div
+                        key={criminal.name}
+                        className={`group transform ${criminal.rotation} hover:rotate-0 transition-all duration-500 hover:scale-105 hover:z-20`}
+                        style={{
+                          filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.3))',
+                          overflow: 'visible',
+                          height: 'auto',
+                          minHeight: '0',
+                          maxHeight: 'none'
+                        }}
+                      >
+                        
+                        {/* Black Framed Wanted Poster */}
+                        <div className="bg-gradient-to-b from-white to-gray-50 border-4 border-black relative shadow-lg" style={{ 
+                          overflow: 'visible', 
+                          height: 'auto', 
+                          minHeight: '0', 
+                          maxHeight: 'none' 
+                        }}>
+                          
+                          {/* Modern push pins */}
+                          <div className="absolute -top-2 left-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
+                          <div className="absolute -top-2 right-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
+                          
+                          {/* Subtle modern paper effect */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-transparent to-gray-100/20" />
+                          <div className="absolute top-4 right-4 w-6 h-6 bg-slate-200/40 rounded-full" />
+                          <div className="absolute bottom-6 left-4 w-4 h-4 bg-gray-300/30 rounded-full" />
+
+                          <div className="p-6 text-center relative z-10">
+                            
+                            {/* WANTED Header */}
+                            <div className="mb-4">
+                              <h3 className="text-3xl font-black text-black mb-2"
+                                  style={{ 
+                                    fontFamily: 'serif',
+                                    letterSpacing: '0.1em'
+                                  }}>
+                                TEAM
+                              </h3>
+                              <div className="w-full h-0.5 bg-black mb-2" />
+                            </div>
+
+                            {/* Photo */}
+                            <div className="relative mb-4 mx-auto w-32 h-32 border-2 border-black bg-gray-100 rounded-sm" style={{ 
+                              overflow: 'visible' 
+                            }}>
+                              <ImageWithFallback
+                                src={criminal.image}
+                                alt={criminal.name}
+                                className="w-full h-full object-cover rounded-sm"
+                                style={{
+                                  filter: 'sepia(20%) contrast(105%) brightness(100%) hue-rotate(5deg) saturate(90%)'
+                                }}
+                              />
+                              
+                              {/* Subtle modern overlay */}
+                              <div className="absolute inset-0 bg-gradient-to-t from-slate-100/10 to-transparent rounded-sm" />
+                              
+                              {/* Mustache */}
+                              <Mustache 
+                                style={criminal.mustacheStyle} 
+                                className="bottom-4 left-1/2 -translate-x-1/2 opacity-80" 
+                              />
+                            </div>
+
+                            {/* Details */}
+                            <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
+                              <div className="font-black text-lg text-black">{criminal.name}</div>
+                              <div className="font-bold text-red-600 text-base">{criminal.crime} · {criminal.bounty}</div>
+                              <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
+                                {criminal.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Second row - 3 posters centered */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-5xl mx-auto" style={{ 
+                    overflow: 'visible', 
+                    height: 'auto', 
+                    minHeight: '0', 
+                    maxHeight: 'none' 
+                  }}>
+                    {wantedCriminals.slice(4, 7).map((criminal, index) => (
+                      <div
+                        key={criminal.name}
+                        className={`group transform ${criminal.rotation} hover:rotate-0 transition-all duration-500 hover:scale-105 hover:z-20`}
+                        style={{
+                          filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.3))',
+                          overflow: 'visible',
+                          height: 'auto',
+                          minHeight: '0',
+                          maxHeight: 'none'
+                        }}
+                      >
+                        
+                        {/* Black Framed Wanted Poster */}
+                        <div className="bg-gradient-to-b from-white to-gray-50 border-4 border-black relative shadow-lg" style={{ 
+                          overflow: 'visible', 
+                          height: 'auto', 
+                          minHeight: '0', 
+                          maxHeight: 'none' 
+                        }}>
+                          
+                          {/* Modern push pins */}
+                          <div className="absolute -top-2 left-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
+                          <div className="absolute -top-2 right-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
+                          
+                          {/* Subtle modern paper effect */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-transparent to-gray-100/20" />
+                          <div className="absolute top-4 right-4 w-6 h-6 bg-slate-200/40 rounded-full" />
+                          <div className="absolute bottom-6 left-4 w-4 h-4 bg-gray-300/30 rounded-full" />
+
+                          <div className="p-6 text-center relative z-10">
+                            
+                            {/* WANTED Header */}
+                            <div className="mb-4">
+                              <h3 className="text-3xl font-black text-black mb-2"
+                                  style={{ 
+                                    fontFamily: 'serif',
+                                    letterSpacing: '0.1em'
+                                  }}>
+                                TEAM
+                              </h3>
+                              <div className="w-full h-0.5 bg-black mb-2" />
+                            </div>
+
+                            {/* Photo */}
+                            <div className="relative mb-4 mx-auto w-32 h-32 border-2 border-black bg-gray-100 rounded-sm" style={{ 
+                              overflow: 'visible' 
+                            }}>
+                              <ImageWithFallback
+                                src={criminal.image}
+                                alt={criminal.name}
+                                className="w-full h-full object-cover rounded-sm"
+                                style={{
+                                  filter: 'sepia(20%) contrast(105%) brightness(100%) hue-rotate(5deg) saturate(90%)'
+                                }}
+                              />
+                              
+                              {/* Subtle modern overlay */}
+                              <div className="absolute inset-0 bg-gradient-to-t from-slate-100/10 to-transparent rounded-sm" />
+                              
+                              {/* Mustache */}
+                              <Mustache 
+                                style={criminal.mustacheStyle} 
+                                className="bottom-4 left-1/2 -translate-x-1/2 opacity-80" 
+                              />
+                            </div>
+
+                            {/* Details */}
+                            <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
+                              <div className="font-black text-lg text-black">{criminal.name}</div>
+                              <div className="font-bold text-red-600 text-base">{criminal.crime} · {criminal.bounty}</div>
+                              <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
+                                {criminal.description}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
+            
+            {/* Black frame shadow */}
+            <div className="absolute -inset-4 bg-black/30 rounded-2xl -z-10 blur-xl" />
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
   )
 }
