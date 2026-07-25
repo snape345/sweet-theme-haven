@@ -99,13 +99,12 @@ export function Services() {
           </p>
         </div>
 
-        {/* Photo Lab Clotheslines */}
+        {/* Photo Lab Clothesline - Single Row */}
         <div className={`w-full transform transition-all duration-1000 delay-600 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
         }`} style={{ overflow: 'visible' }}>
           
-          {/* First Clothesline - Top Row */}
-          <div className="relative mb-24" style={{ overflow: 'visible' }}>
+          <div className="relative" style={{ overflow: 'visible' }}>
             {/* Ultra-Realistic Rope - Full width from edge to edge */}
             <div className="absolute top-8 left-0 right-0 h-4 rope-sway">
               {/* Rope base with realistic hemp coloring */}
@@ -184,18 +183,19 @@ export function Services() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-gray-900 rounded-full" />
             </div>
             
-            {/* Photos hanging from first line */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
-              {services.slice(0, 2).map((service, index) => (
+            {/* Photos hanging from single line - all 4 in one row */}
+            <div className="flex flex-wrap lg:flex-nowrap justify-center gap-4 sm:gap-6 lg:gap-8 pt-20 max-w-7xl mx-auto px-4">
+              {services.map((service, index) => (
                 <div
                   key={service.id}
                   className={`transform transition-all duration-700 ${
                     hoveredPhoto === service.id ? 'scale-105 -translate-y-2' : 'scale-100'
                   } ${
-                     index === 0 ? 'photo-sway-1' : index === 1 ? 'photo-sway-2' : 'photo-sway-3'
+                     index % 3 === 0 ? 'photo-sway-1' : index % 3 === 1 ? 'photo-sway-2' : 'photo-sway-3'
                   }`}
                    style={{
-                     transitionDelay: `${index * 200 + 800}ms`
+                     transitionDelay: `${index * 200 + 800}ms`,
+                     animationDelay: `${index * 1.5}s`
                    }}
                   onMouseEnter={() => setHoveredPhoto(service.id)}
                   onMouseLeave={() => setHoveredPhoto(null)}
@@ -256,7 +256,7 @@ export function Services() {
                   </div>
                   
                   {/* Photo */}
-                  <div className="relative bg-white p-4 pb-8 shadow-2xl cursor-pointer w-[260px] sm:w-[280px] max-w-[90vw]"
+                  <div className="relative bg-white p-3 sm:p-4 pb-6 sm:pb-8 shadow-2xl cursor-pointer w-[220px] sm:w-[240px] max-w-[90vw]"
                        style={{
                          filter: hoveredPhoto === service.id ? 'brightness(1.1) contrast(1.05)' : 'brightness(1) contrast(0.95)',
                          boxShadow: `
@@ -267,7 +267,7 @@ export function Services() {
                        }}>
                     
                     {/* Photo Area */}
-                    <div className="h-48 mb-6 rounded-sm relative">
+                    <div className="h-36 sm:h-44 mb-4 sm:mb-6 rounded-sm relative">
                       <ImageWithFallback
                         src={service.image}
                         alt={service.title}
@@ -291,11 +291,11 @@ export function Services() {
                     
                     {/* Text */}
                     <div className="relative">
-                      <h3 className="font-black text-lg text-gray-800 mb-3 leading-tight">
+                      <h3 className="font-black text-base sm:text-lg text-gray-800 mb-2 sm:mb-3 leading-tight">
                         {service.title}
                       </h3>
                       
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -305,210 +305,7 @@ export function Services() {
                     <div className="absolute bottom-8 left-3 w-2 h-8 bg-yellow-100/20 rounded-full transform rotate-15" />
                     
                     {/* Developer stamp */}
-                    <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
-                      TALENT SOURCE · ME
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Second Clothesline - Bottom Row */}
-          <div className="relative" style={{ overflow: 'visible' }}>
-            {/* Ultra-Realistic Rope - Full width from edge to edge */}
-            <div className="absolute top-8 left-0 right-0 h-4 rope-sway" style={{ animationDelay: '2s' }}>
-              {/* Rope base with realistic hemp coloring */}
-              <div className="w-full h-full bg-gradient-to-b from-yellow-800 via-amber-900 to-yellow-900 rounded-full shadow-lg" />
-              
-              {/* Primary twisted fiber strands */}
-              <div className="absolute inset-0 opacity-90 rounded-full" 
-                   style={{
-                     backgroundImage: `
-                       repeating-conic-gradient(
-                         from 0deg at 50% 50%,
-                         #8B4513 0deg,
-                         #A0522D 30deg,
-                         #654321 60deg,
-                         #8B4513 90deg,
-                         #A0522D 120deg,
-                         #654321 150deg,
-                         #8B4513 180deg,
-                         #A0522D 210deg,
-                         #654321 240deg,
-                         #8B4513 270deg,
-                         #A0522D 300deg,
-                         #654321 330deg
-                       ),
-                       repeating-linear-gradient(
-                         45deg,
-                         rgba(139,69,19,0.6) 0px,
-                         rgba(160,82,45,0.4) 2px,
-                         transparent 4px,
-                         rgba(101,67,33,0.6) 6px,
-                         transparent 8px
-                       ),
-                       repeating-linear-gradient(
-                         -45deg,
-                         rgba(160,82,45,0.5) 0px,
-                         transparent 2px,
-                         rgba(139,69,19,0.6) 4px,
-                         rgba(101,67,33,0.4) 6px,
-                         transparent 8px
-                       )
-                     `,
-                     backgroundSize: '100% 100%, 12px 100%, 14px 100%'
-                   }} />
-              
-              {/* Individual fiber highlights */}
-              <div className="absolute inset-0 opacity-60 rounded-full" 
-                   style={{
-                     backgroundImage: `
-                       radial-gradient(ellipse at 20% 30%, rgba(218,165,32,0.8) 0%, transparent 30%),
-                       radial-gradient(ellipse at 60% 20%, rgba(205,133,63,0.6) 0%, transparent 25%),
-                       radial-gradient(ellipse at 80% 70%, rgba(210,180,140,0.7) 0%, transparent 35%),
-                       radial-gradient(ellipse at 40% 80%, rgba(222,184,135,0.5) 0%, transparent 30%)
-                     `
-                   }} />
-              
-              {/* Rope dimensional highlighting */}
-              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-yellow-700 to-transparent rounded-full opacity-80" />
-              
-              {/* Deep rope shadow for realism */}
-              <div className="absolute top-2 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-yellow-950 to-transparent rounded-full opacity-70" />
-              
-              {/* Multi-layer drop shadow */}
-              <div className="absolute -bottom-3 left-0 right-0 h-4 bg-black/30 rounded-full blur-xl" />
-              <div className="absolute -bottom-1 left-0 right-0 h-2 bg-black/50 rounded-full blur-sm" />
-            </div>
-            
-            {/* Heavy-duty wall anchor points */}
-            <div className="absolute left-0 sm:-left-10 top-4 w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-800 rounded-full shadow-xl border border-gray-400">
-              <div className="absolute top-1.5 left-1.5 w-3 h-3 bg-gray-300 rounded-full opacity-80" />
-              <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 bg-black/60 rounded-full" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-gray-900 rounded-full" />
-            </div>
-            <div className="absolute right-0 sm:-right-10 top-4 w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-800 rounded-full shadow-xl border border-gray-400">
-              <div className="absolute top-1.5 left-1.5 w-3 h-3 bg-gray-300 rounded-full opacity-80" />
-              <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 bg-black/60 rounded-full" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-gray-900 rounded-full" />
-            </div>
-            
-            {/* Photos hanging from second line */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
-              {services.slice(2, 4).map((service, index) => (
-                <div
-                  key={service.id}
-                  className={`transform transition-all duration-700 ${
-                    hoveredPhoto === service.id ? 'scale-105 -translate-y-2' : 'scale-100'
-                  } ${
-                     index === 0 ? 'photo-sway-3' : index === 1 ? 'photo-sway-1' : 'photo-sway-2'
-                  }`}
-                   style={{
-                     transitionDelay: `${(index + 3) * 200 + 800}ms`,
-                     animationDelay: `${index * 1.5 + 3}s`
-                   }}
-                  onMouseEnter={() => setHoveredPhoto(service.id)}
-                  onMouseLeave={() => setHoveredPhoto(null)}
-                >
-                  {/* Simple Realistic Wooden Clothespin */}
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
-                    {/* Clothespin body */}
-                    <div className="relative w-5 h-10">
-                      {/* Left wooden half */}
-                      <div className="absolute left-0 top-0 w-2.5 h-10 bg-gradient-to-r from-yellow-200 to-orange-200 rounded-l-md shadow-md border-r border-orange-300/30">
-                        {/* Simple wood grain */}
-                        <div className="absolute inset-0 opacity-30 rounded-l-md"
-                             style={{
-                               backgroundImage: `
-                                 linear-gradient(0deg, 
-                                   rgba(139,69,19,0.2) 0%, 
-                                   transparent 20%, 
-                                   rgba(160,82,45,0.15) 40%, 
-                                   transparent 60%, 
-                                   rgba(139,69,19,0.2) 80%, 
-                                   transparent 100%
-                                 )
-                               `,
-                               backgroundSize: '100% 8px'
-                             }} />
-                      </div>
-                      
-                      {/* Right wooden half */}
-                      <div className="absolute right-0 top-0 w-2.5 h-10 bg-gradient-to-l from-yellow-200 to-orange-200 rounded-r-md shadow-md border-l border-orange-300/30">
-                        {/* Simple wood grain */}
-                        <div className="absolute inset-0 opacity-30 rounded-r-md"
-                             style={{
-                               backgroundImage: `
-                                 linear-gradient(0deg, 
-                                   rgba(139,69,19,0.2) 0%, 
-                                   transparent 20%, 
-                                   rgba(160,82,45,0.15) 40%, 
-                                   transparent 60%, 
-                                   rgba(139,69,19,0.2) 80%, 
-                                   transparent 100%
-                                 )
-                               `,
-                               backgroundSize: '100% 8px'
-                             }} />
-                      </div>
-                      
-                      {/* Simple metal spring */}
-                      <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-2 bg-gradient-to-b from-gray-300 to-gray-500 rounded-sm shadow-sm">
-                        {/* Spring coils */}
-                        <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-gray-400 rounded-full" />
-                        <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-gray-400 rounded-full" />
-                      </div>
-                      
-                      {/* Clothespin tips */}
-                      <div className="absolute bottom-0 left-0 w-2.5 h-2 bg-gradient-to-b from-orange-200 to-orange-300 rounded-b-md" />
-                      <div className="absolute bottom-0 right-0 w-2.5 h-2 bg-gradient-to-b from-orange-200 to-orange-300 rounded-b-md" />
-                    </div>
-                  </div>
-                  
-                  {/* Photo - Same structure as above */}
-                  <div className="relative bg-white p-4 pb-8 shadow-2xl cursor-pointer w-[260px] sm:w-[280px] max-w-[90vw]"
-                       style={{
-                         filter: hoveredPhoto === service.id ? 'brightness(1.1) contrast(1.05)' : 'brightness(1) contrast(0.95)',
-                         boxShadow: `
-                           0 20px 40px rgba(0,0,0,0.6),
-                           0 8px 16px rgba(0,0,0,0.4),
-                           inset 0 1px 0 rgba(255,255,255,0.9)
-                         `
-                       }}>
-                    
-                    <div className="h-48 mb-6 rounded-sm relative">
-                      <ImageWithFallback
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover rounded-sm"
-                        style={{
-                          filter: 'sepia(15%) saturate(85%) brightness(90%) contrast(1.1)'
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-red-900/5 rounded-sm" />
-                      <div className="absolute inset-0 opacity-[0.03] rounded-sm" 
-                           style={{
-                             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(139,69,19,0.8) 1px, transparent 0)`,
-                             backgroundSize: '3px 3px'
-                           }} />
-                      <div className="absolute top-2 right-2 w-6 h-6 bg-white/20 rounded-full transform rotate-45" />
-                    </div>
-                    
-                    <div className="relative">
-                      <h3 className="font-black text-lg text-gray-800 mb-3 leading-tight">
-                        {service.title}
-                      </h3>
-                      
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                    
-                    <div className="absolute top-3 right-3 w-4 h-4 bg-yellow-100/30 rounded-full" />
-                    <div className="absolute bottom-8 left-3 w-2 h-8 bg-yellow-100/20 rounded-full transform rotate-15" />
-                    
-                    <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
+                    <div className="absolute bottom-2 right-2 text-[10px] sm:text-xs text-gray-400 font-mono opacity-60">
                       TALENT SOURCE · ME
                     </div>
                   </div>
