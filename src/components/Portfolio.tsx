@@ -1,6 +1,8 @@
 'use client'
 
 
+
+
 export function Portfolio() {
   return (
     <section id="portfolio" className="relative py-32 bg-background">
