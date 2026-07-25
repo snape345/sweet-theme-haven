@@ -47,7 +47,7 @@ export function Awards() {
             {categories.map((cat, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md"
               >
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
