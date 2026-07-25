@@ -12,31 +12,31 @@ export function About() {
       number: "01",
       title: "Inquire",
       description: "Share your venue, dates and the mood you have in mind",
-      color: "accent-blue"
+      color: "amber-500"
     },
     {
       number: "02",
       title: "Get Matched",
       description: "A shortlist of freelance DJs, vocalists, dancers or performers",
-      color: "accent-emerald"
+      color: "rose-400"
     },
     {
       number: "03",
       title: "Coordinate",
       description: "Introductions, timing and logistics, quietly handled",
-      color: "accent-purple"
+      color: "amber-600"
     },
     {
       number: "04",
       title: "Programme the Night",
       description: "The artist performs; you keep commercial terms direct",
-      color: "accent-blue"
+      color: "amber-500"
     },
     {
       number: "05",
       title: "Promote & Repeat",
       description: "Light online promotion and a growing roster you can rebook",
-      color: "accent-purple"
+      color: "rose-400"
     }
   ]
 
