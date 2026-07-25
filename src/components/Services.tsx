@@ -95,7 +95,7 @@ export function Services() {
           <p className={`text-xl text-amber-200/90 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            Six focused offerings — sourcing, promotion and coordination for Dubai's premium hospitality
+            Four focused offerings — sourcing, promotion and coordination for Dubai's premium hospitality
           </p>
         </div>
 
