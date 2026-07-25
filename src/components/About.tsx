@@ -54,10 +54,12 @@ export function About() {
   }, [])
 
   return (
-    <section id="about" className="relative py-20 bg-background overflow-hidden">
+    <section id="about" className="relative py-20 overflow-hidden" style={{
+      background: 'linear-gradient(135deg, #2d1810 0%, #1a0f08 40%, #0f0704 70%, #1a0f08 100%)'
+    }}>
       
       {/* Cinematic Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
       
       {/* Film Grain Effect */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
