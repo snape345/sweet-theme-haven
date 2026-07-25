@@ -33,7 +33,8 @@ export function Awards() {
           </div>
 
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
-            Programmed for the city's finest rooms
+            <span className="block">Nights that feel effortless.</span>
+            <span className="block">Programmed for the city's finest rooms.</span>
           </h2>
 
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
