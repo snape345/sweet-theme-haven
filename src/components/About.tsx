@@ -243,7 +243,7 @@ export function About() {
               <div 
                 className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-10"
                 style={{
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,0,0.2) 40%, transparent 60%)',
+                  background: 'radial-gradient(circle, rgba(251,191,36,0.9) 0%, rgba(251,191,36,0.4) 20%, rgba(225,29,72,0.15) 40%, transparent 60%)',
                   animation: 'projectorLight 12s ease-in-out infinite'
                 }}
               />
