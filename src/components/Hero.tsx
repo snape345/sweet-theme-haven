@@ -100,10 +100,10 @@ export function Hero() {
         className="fixed top-0 left-0 right-0 w-full z-[110]"
       >
         <div 
-          className={`w-full px-6 sm:px-8 lg:px-12 py-4 transition-all duration-300 ease-out ${
+          className={`w-full px-6 sm:px-8 lg:px-12 py-4 border-b transition-all duration-300 ease-out ${
             isScrolled 
-              ? 'bg-black/80 backdrop-blur-xl' 
-              : 'bg-transparent'
+              ? 'bg-black/80 backdrop-blur-xl border-white/10' 
+              : 'bg-transparent border-transparent'
           }`}
         >
           <div className="flex items-center justify-between">
