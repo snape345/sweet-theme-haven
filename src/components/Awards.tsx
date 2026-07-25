@@ -1,51 +1,27 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import minimalBestFilm from '../assets/minimal-best-film.png'
-import minimalAudienceChoice from '../assets/minimal-audience-choice.png'
-import minimalInnovation from '../assets/minimal-innovation.png'
-import minimalDirectorsChoice from '../assets/minimal-directors-choice.png'
-import minimalExcellence from '../assets/minimal-excellence.png'
-import minimalRisingTalent from '../assets/minimal-rising-talent.png'
+import catHosts from '../assets/cat-hosts.jpg'
+import catDjs from '../assets/cat-djs.jpg'
+import catDancers from '../assets/cat-dancers.jpg'
+import catModels from '../assets/cat-models.jpg'
+import catActors from '../assets/cat-actors.jpg'
+import catSpeciality from '../assets/cat-speciality.jpg'
 
 export function Awards() {
-  const awards = [
-    {
-      image: minimalBestFilm,
-      delay: "0s"
-    },
-    {
-      image: minimalAudienceChoice,
-      delay: "0.5s"
-    },
-    {
-      image: minimalInnovation,
-      delay: "1s"
-    },
-    {
-      image: minimalDirectorsChoice,
-      delay: "1.5s"
-    },
-    {
-      image: minimalExcellence,
-      delay: "2s"
-    },
-    {
-      image: minimalRisingTalent,
-      delay: "2.5s"
-    }
+  const categories = [
+    { image: catHosts, title: 'Event Hosts & Presenters' },
+    { image: catDjs, title: 'Live Music & DJs' },
+    { image: catDancers, title: 'Dancers & Stage Performers' },
+    { image: catModels, title: 'Models & Brand Ambassadors' },
+    { image: catActors, title: 'Actors & Voiceover Talent' },
+    { image: catSpeciality, title: 'Speciality & Interactive Entertainment' },
   ]
 
   return (
     <section id="awards" className="relative py-20 bg-background overflow-hidden">
-      
-      {/* Elegant Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
-      
-
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
@@ -55,65 +31,45 @@ export function Awards() {
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
-          
+
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-foreground">
             Programmed for the city's finest rooms
           </h2>
-          
+
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             Freelance artists we source play hotels, beach clubs, rooftops, lounges and private venues across the UAE.
           </p>
         </div>
 
-        {/* Awards Display */}
+        {/* Category Grid */}
         <div className="relative max-w-7xl mx-auto">
-          
-          {/* Awards Grid */}
-          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {awards.map((award, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((cat, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col items-center text-center"
-                style={{ animationDelay: award.delay }}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
               >
-                
-                {/* Award Pedestal */}
-                <div className="relative mb-6">
-                  
-                  {/* Floating Award Display */}
-                  <div className={`relative p-6 rounded-2xl border shadow-md transition-all duration-500 hover:scale-105 ${
-                    index === 2 || index === 3 ? 'bg-gray-800 border-gray-700' : 'bg-background border-border'
-                  }`}
-                       style={{ 
-                         boxShadow: '0 8px 24px rgba(0,0,0,0.08)'
-                       }}>
-                    
-                    {/* Award Image */}
-                    <img 
-                      src={award.image}
-                      alt="Film Festival Award Laurel"
-                      className="w-full h-auto max-w-48 mx-auto"
-                      style={{
-                        filter: 'contrast(1.02) saturate(1.1)',
-                      }}
-                    />
-                    
-
-                  </div>
-                  
-                  {/* Floating Animation */}
-                  <div className="float-gentle absolute inset-0 pointer-events-none" />
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
-
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-2xl font-bold text-white leading-tight">
+                    {cat.title}
+                  </h3>
+                </div>
               </div>
             ))}
           </div>
-
         </div>
-
-
       </div>
-      
     </section>
   )
 }
