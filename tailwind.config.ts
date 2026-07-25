@@ -18,7 +18,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        bagel: ['Bagel Fat One', 'cursive'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "var(--border)",

@@ -22,7 +22,7 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="col-span-12 md:col-span-4">
             <div>
-              <div className="font-bagel text-background text-3xl tracking-wider mb-4">
+              <div className="font-poppins text-background text-3xl tracking-wider mb-4">
                 TALENT SOURCE ME
               </div>
               <p className="text-background/70 leading-relaxed mb-6">

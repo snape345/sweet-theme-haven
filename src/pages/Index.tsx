@@ -11,7 +11,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 via-accent-purple/10 to-accent-emerald/20"></div>
         
         <div className="relative z-10 text-center space-y-8 max-w-4xl mx-auto px-4">
-          <h1 className="font-bagel text-6xl md:text-8xl text-shadow-strong">
+          <h1 className="font-poppins text-6xl md:text-8xl text-shadow-strong">
             BAGEL FAT
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
@@ -43,7 +43,7 @@ const Index = () => {
       {/* Animation Showcase */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 font-bagel">
+          <h2 className="text-4xl font-bold text-center mb-16 font-poppins">
             Анимации и Эффекты
           </h2>
           <AnimationShowcase />
@@ -53,7 +53,7 @@ const Index = () => {
       {/* Glass Effects Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-accent-blue/5 via-accent-purple/5 to-accent-emerald/5">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 font-bagel">
+          <h2 className="text-4xl font-bold text-center mb-16 font-poppins">
             Стеклянные Эффекты
           </h2>
           
@@ -80,10 +80,10 @@ const Index = () => {
       {/* Typography Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl font-bold font-bagel">Типографика</h2>
+          <h2 className="text-4xl font-bold font-poppins">Типографика</h2>
           
           <div className="space-y-6">
-            <h1 className="font-bagel text-shadow-medium">Заголовок H1 с Bagel Fat</h1>
+            <h1 className="font-poppins text-shadow-medium">Заголовок H1 с Bagel Fat</h1>
             <h2>Заголовок H2 с системным шрифтом</h2>
             <h3>Заголовок H3 с улучшенной типографикой</h3>
             <p>
@@ -97,7 +97,7 @@ const Index = () => {
       {/* Color Palette */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 font-bagel">
+          <h2 className="text-4xl font-bold text-center mb-16 font-poppins">
             Цветовая Палитра
           </h2>
           
