@@ -286,7 +286,7 @@ export function About() {
         {/* AI Generated Content Gallery */}
         <div className="mt-20">
           <div className="text-center mb-8">
-            <p className="text-muted-foreground">
+            <p className="text-amber-200/80">
               A glimpse of the artists we source across Dubai's rooms
             </p>
           </div>
