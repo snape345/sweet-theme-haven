@@ -4,8 +4,15 @@ import { useState, useEffect } from 'react'
 
 export function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false)
-  const whatsappUrl =
-    'https://wa.me/971528896974?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20talent%20services'
+  const whatsappPhone = '971528896974'
+  const whatsappMessage =
+    'Hello, I would like to inquire about your talent services'
+  const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
+    whatsappMessage
+  )}`
+  const whatsappAppUrl = `whatsapp://send?phone=${whatsappPhone}&text=${encodeURIComponent(
+    whatsappMessage
+  )}`
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 1500)
@@ -26,7 +33,11 @@ export function WhatsAppButton() {
         aria-label="Chat on WhatsApp"
         onClick={(e) => {
           e.preventDefault()
-          window.open(whatsappUrl, '_blank')
+          const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+          const destination = isMobileDevice ? whatsappAppUrl : whatsappWebUrl
+
+          window.top?.open(destination, '_blank', 'noopener,noreferrer') ??
+            window.open(destination, '_blank', 'noopener,noreferrer')
         }}
         className="group relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_10px_40px_-10px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300"
       >
