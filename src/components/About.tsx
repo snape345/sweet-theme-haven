@@ -23,7 +23,7 @@ export function About() {
     {
       number: "03",
       title: "Coordinate",
-      description: "Introductions, timing and logistics — quietly handled",
+      description: "Introductions, timing and logistics, quietly handled",
       color: "accent-purple"
     },
     {
@@ -85,7 +85,7 @@ export function About() {
           </h2>
           
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            A quiet, considered flow — designed around the tempo of premium hospitality in Dubai
+            A quiet, considered flow, designed around the tempo of premium hospitality in Dubai
           </p>
         </div>
 
@@ -316,7 +316,7 @@ export function About() {
             {/* Caption */}
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground italic">
-                "Curated freelance artists — matched to your room, your clientele, your tempo"
+                "Curated freelance artists, matched to your room, your clientele, your tempo"
               </p>
             </div>
           </div>

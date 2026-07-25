@@ -23,7 +23,7 @@ export function Services() {
     {
       id: 'online-promotion',
       title: "Online Promotion",
-      description: "Discreet social-media promotion for talent and venue collaborations — thoughtfully produced content that respects your brand.",
+      description: "Discreet social-media promotion for talent and venue collaborations, thoughtfully produced content that respects your brand.",
       color: 'accent-blue',
       rotation: '-rotate-1',
       image: servicePromotion
@@ -31,7 +31,7 @@ export function Services() {
     {
       id: 'coordination',
       title: "Booking Coordination",
-      description: "A single point of contact for introductions, availability and logistics — no commercial transactions handled online.",
+      description: "A single point of contact for introductions, availability and logistics, no commercial transactions handled online.",
       color: 'accent-purple',
       rotation: 'rotate-1',
       image: serviceCoordination
@@ -39,7 +39,7 @@ export function Services() {
     {
       id: 'programming',
       title: "Venue Programming",
-      description: "Ongoing calendars for hotels, beach clubs and lounges — the right artist in the right slot, week after week.",
+      description: "Ongoing calendars for hotels, beach clubs and lounges, the right artist in the right slot, week after week.",
       color: 'accent-emerald',
       rotation: '-rotate-2',
       image: serviceProgramming
@@ -95,7 +95,7 @@ export function Services() {
           <p className={`text-xl text-amber-200/90 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            Four focused offerings — sourcing, promotion and coordination for Dubai's premium hospitality
+            Four focused offerings, sourcing, promotion and coordination for Dubai's premium hospitality
           </p>
         </div>
 
@@ -520,7 +520,7 @@ export function Services() {
           {/* Darkroom atmosphere note */}
           <div className="mt-16 text-center">
             <p className="text-sm text-amber-200/70 leading-relaxed max-w-2xl mx-auto">
-              Every shortlist is developed with the care of a darkroom print — quietly, deliberately, and matched to the room it will play in.
+              Every shortlist is developed with the care of a darkroom print, quietly, deliberately, and matched to the room it will play in.
             </p>
           </div>
         </div>
