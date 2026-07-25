@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
+import serviceSourcing from '../assets/service-sourcing.jpg'
+import servicePromotion from '../assets/service-promotion.jpg'
+import serviceCoordination from '../assets/service-coordination.jpg'
+import serviceProgramming from '../assets/service-programming.jpg'
 
 export function Services() {
   const [isVisible, setIsVisible] = useState(false)
