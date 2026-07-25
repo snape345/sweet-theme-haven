@@ -13,7 +13,7 @@ export function Contact() {
       return
     }
     setIsSubmitting(true)
-    // Simulate submission — connect to a backend to actually send
+    // Simulate submission, connect to a backend to actually send
     setTimeout(() => {
       toast({ title: 'Message sent!', description: "We'll get back to you soon." })
       setFormData({ name: '', email: '', message: '' })
@@ -39,7 +39,7 @@ export function Contact() {
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Tell us about your venue, dates and the mood you have in mind — we'll come back with a shortlist.
+            Tell us about your venue, dates and the mood you have in mind, we'll come back with a shortlist.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export function Contact() {
                     Enquire
                   </h3>
                   <p className="text-muted-foreground">
-                    Share your brief — a single point of contact will reply discreetly
+                    Share your brief, a single point of contact will reply discreetly
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
@@ -99,7 +99,7 @@ export function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                   className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all resize-none"
-                  placeholder="Venue, dates, mood — anything you'd like us to know"
+                  placeholder="Venue, dates, mood, anything you'd like us to know"
                 />
               </div>
               <button
@@ -142,7 +142,7 @@ export function Contact() {
               </div>
               <h4 className="font-black text-foreground mb-2">Coordinate</h4>
               <p className="text-muted-foreground text-sm">
-                Introductions, timing and light online promotion — no online payments
+                Introductions, timing and light online promotion, no online payments
               </p>
             </div>
           </div>
