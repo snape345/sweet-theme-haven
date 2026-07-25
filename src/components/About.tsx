@@ -318,7 +318,7 @@ export function About() {
               {/* Subtle overlay gradient for depth */}
               <div className="absolute inset-4 rounded-xl pointer-events-none"
                    style={{
-                     background: 'linear-gradient(135deg, rgba(37,99,235,0.03) 0%, transparent 20%, transparent 80%, rgba(124,58,237,0.03) 100%)'
+                      background: 'linear-gradient(135deg, rgba(251,191,36,0.03) 0%, transparent 20%, transparent 80%, rgba(225,29,72,0.03) 100%)'
                    }} />
             </div>
             
