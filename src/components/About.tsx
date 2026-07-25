@@ -139,12 +139,6 @@ export function About() {
               }`} style={{ width: 'max-content', gap: '32px' }}>
                 
                 {/* Original sequence for seamless loop */}
-                {/* Start frame */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
-                     style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
-                  <div className="text-gray-400 font-mono tracking-wider">● START</div>
-                </div>
-                
                 {/* Process Step Frames */}
                 {processSteps.map((step, index) => (
                   <div
@@ -191,19 +185,7 @@ export function About() {
                   </div>
                 ))}
                 
-                {/* End frame */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center"
-                     style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
-                  <div className="text-gray-400 font-mono tracking-wider">● END</div>
-                </div>
-                
                 {/* Duplicate set for seamless loop */}
-                {/* Start frame duplicate */}
-                <div className="flex-shrink-0 w-80 h-52 bg-gray-800 rounded-lg border-2 border-gray-700 opacity-60 flex items-center justify-center" 
-                     style={{ boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.4)' }}>
-                  <div className="text-gray-400 font-mono tracking-wider">● START</div>
-                </div>
-                
                 {/* Process Step Frames duplicate */}
                 {processSteps.map((step, index) => (
                   <div
