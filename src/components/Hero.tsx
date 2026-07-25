@@ -148,8 +148,8 @@ export function Hero() {
 
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#portfolio" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Roster</a>
               <a href="#about" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">How It Works</a>
+              <a href="#awards" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Talent</a>
               <a href="#services" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Services</a>
               <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Enquire</a>
             </div>
@@ -234,18 +234,18 @@ export function Hero() {
             {/* Mobile Navigation Links */}
             <div className="flex flex-col space-y-4 text-white">
               <a 
-                href="#portfolio" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Roster
-              </a>
-              <a 
                 href="#about" 
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 How It Works
+              </a>
+              <a 
+                href="#awards" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Talent
               </a>
               <a 
                 href="#services" 
