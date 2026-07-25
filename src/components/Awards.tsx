@@ -50,12 +50,12 @@ export function Awards() {
         </div>
 
         {/* Category Grid */}
-        <div className="relative max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="relative max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((cat, index) => (
-              <div key={index} className="flex flex-col gap-4">
-                <div className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md">
-                  <div className="aspect-[4/5] overflow-hidden">
+              <div key={index} className="flex flex-col gap-3">
+                <div className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img
                       src={cat.image}
                       alt={cat.title}
@@ -66,8 +66,8 @@ export function Awards() {
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-2xl font-bold text-white leading-tight">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">
                       {cat.title}
                     </h3>
                   </div>
@@ -77,13 +77,13 @@ export function Awards() {
                   href={getWhatsAppUrl(cat.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg active:scale-[0.98]"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg active:scale-[0.98]"
                 >
                   Book Now
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
