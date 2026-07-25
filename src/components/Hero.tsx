@@ -102,7 +102,7 @@ export function Hero() {
         <div 
           className={`w-full px-6 sm:px-8 lg:px-12 py-4 transition-all duration-300 ease-out ${
             isScrolled 
-              ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
+              ? 'bg-black/80 backdrop-blur-xl' 
               : 'bg-transparent'
           }`}
         >
