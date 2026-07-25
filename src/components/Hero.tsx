@@ -115,7 +115,7 @@ export function Hero() {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
-              <span className="font-bagel text-white text-xl tracking-wider">TALENT SOURCE ME</span>
+              <span className="font-poppins text-white text-xl tracking-wider">TALENT SOURCE ME</span>
             </motion.div>
 
             {/* Navigation Menu */}
