@@ -26,10 +26,11 @@ export function WhatsAppButton() {
         aria-label="Chat on WhatsApp"
         onClick={(e) => {
           e.preventDefault()
-          const openedWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+          const openedWindow = window.open('', '_blank')
 
-          if (!openedWindow) {
-            window.location.assign(whatsappUrl)
+          if (openedWindow) {
+            openedWindow.opener = null
+            openedWindow.location.href = whatsappUrl
           }
         }}
         className="group relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_10px_40px_-10px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300"
