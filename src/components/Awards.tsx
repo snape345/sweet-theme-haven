@@ -51,7 +51,7 @@ export function Awards() {
 
         {/* Category Grid */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
             {categories.map((cat, index) => (
               <div key={index} className="flex flex-col gap-3">
                 <div className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md">
