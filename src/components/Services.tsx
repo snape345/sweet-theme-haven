@@ -9,35 +9,59 @@ export function Services() {
 
   const services = [
     {
-      id: 'sourcing',
-      title: "Sourcing",
-      description: "We find the right freelance DJs, singers, dancers, musicians and specialty performers for your venue's room, mood and clientele.",
+      id: 'dj-sourcing',
+      title: "Freelance DJ Sourcing",
+      description: "Open-format, house, deep, Afro and Arabic — freelance DJs matched to your venue's room, mood and clientele.",
       color: 'accent-emerald',
       rotation: 'rotate-2',
       image: 'https://images.unsplash.com/photo-1571266028243-e4bb35f0f76c?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'online-coordination',
-      title: "Online Coordination",
-      description: "Discreet digital coordination for talent and venue collaborations — schedules, briefs and content, handled quietly online.",
+      id: 'vocalist-sourcing',
+      title: "Vocalist Sourcing",
+      description: "Live singers for lounge, dining and hotel programming — jazz, soul, acoustic and contemporary sets.",
       color: 'accent-blue',
       rotation: '-rotate-1',
+      image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop&auto=format'
+    },
+    {
+      id: 'dancer-sourcing',
+      title: "Dancer & Performer Sourcing",
+      description: "Elegant dancers and specialty performers for immersive lounge nights, private events and hotel programming.",
+      color: 'accent-purple',
+      rotation: 'rotate-1',
+      image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=400&h=300&fit=crop&auto=format'
+    },
+    {
+      id: 'violinist-sourcing',
+      title: "Violinist & Instrumentalist Sourcing",
+      description: "Solo violinists and instrumental ensembles for upscale dining, lounge ambience and signature venue moments.",
+      color: 'accent-emerald',
+      rotation: '-rotate-2',
+      image: 'https://images.unsplash.com/photo-1465821185615-5b4c38c6bda2?w=400&h=300&fit=crop&auto=format'
+    },
+    {
+      id: 'online-promotion',
+      title: "Online Promotion",
+      description: "Discreet social-media promotion for talent and venue collaborations — thoughtfully produced content that respects your brand.",
+      color: 'accent-emerald',
+      rotation: '-rotate-2',
       image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'booking-coordination',
+      id: 'coordination',
       title: "Booking Coordination",
-      description: "A single point of contact for introductions, availability and logistics — making bookings feel effortless from first call to final set.",
-      color: 'accent-purple',
-      rotation: 'rotate-1',
+      description: "A single point of contact for introductions, availability and logistics — no commercial transactions handled online.",
+      color: 'accent-blue',
+      rotation: 'rotate-3',
       image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'venue-programming',
+      id: 'programming',
       title: "Venue Programming",
       description: "Ongoing calendars for hotels, beach clubs and lounges — the right artist in the right slot, week after week.",
-      color: 'accent-emerald',
-      rotation: '-rotate-2',
+      color: 'accent-purple',
+      rotation: '-rotate-1',
       image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=300&fit=crop&auto=format'
     }
   ]
@@ -91,7 +115,7 @@ export function Services() {
           <p className={`text-xl text-amber-200/90 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            Four focused offerings — sourcing, coordination and programming for Dubai's premium hospitality
+            Six focused offerings — sourcing, promotion and coordination for Dubai's premium hospitality
           </p>
         </div>
 
@@ -182,13 +206,13 @@ export function Services() {
             
             {/* Photos hanging from first line */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
-              {services.slice(0, 2).map((service, index) => (
+              {services.slice(0, 3).map((service, index) => (
                 <div
                   key={service.id}
                   className={`transform transition-all duration-700 ${
                     hoveredPhoto === service.id ? 'scale-105 -translate-y-2' : 'scale-100'
                   } ${
-                     index === 0 ? 'photo-sway-1' : 'photo-sway-2'
+                     index === 0 ? 'photo-sway-1' : index === 1 ? 'photo-sway-2' : 'photo-sway-3'
                   }`}
                    style={{
                      transitionDelay: `${index * 200 + 800}ms`
@@ -392,16 +416,16 @@ export function Services() {
             
             {/* Photos hanging from second line */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 pt-20 max-w-7xl mx-auto px-4">
-              {services.slice(2, 4).map((service, index) => (
+              {services.slice(3, 7).map((service, index) => (
                 <div
                   key={service.id}
                   className={`transform transition-all duration-700 ${
                     hoveredPhoto === service.id ? 'scale-105 -translate-y-2' : 'scale-100'
                   } ${
-                     index === 0 ? 'photo-sway-3' : 'photo-sway-1'
+                     index === 0 ? 'photo-sway-3' : index === 1 ? 'photo-sway-1' : 'photo-sway-2'
                   }`}
                    style={{
-                     transitionDelay: `${(index + 2) * 200 + 800}ms`,
+                     transitionDelay: `${(index + 3) * 200 + 800}ms`,
                      animationDelay: `${index * 1.5 + 3}s`
                    }}
                   onMouseEnter={() => setHoveredPhoto(service.id)}
