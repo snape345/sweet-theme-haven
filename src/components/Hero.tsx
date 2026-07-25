@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Volume2, VolumeX, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import heroBg from '../assets/hero-bg.mp4.asset.json'
 import heroSinger from '../assets/hero-singer.mp4.asset.json'
@@ -12,7 +12,6 @@ import heroViolinist from '../assets/hero-violinist.mp4.asset.json'
 const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url, heroViolinist.url]
 
 export function Hero() {
-  const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [videoIndex, setVideoIndex] = useState(0)
@@ -32,44 +31,17 @@ export function Hero() {
   // Ensure video is muted immediately on load to prevent any audio
   useEffect(() => {
     if (videoRef.current) {
-      console.log('Video element found, setting up...')
       videoRef.current.volume = 0
       videoRef.current.muted = true
       videoRef.current.defaultMuted = true
       
-      // Add event listeners for debugging
-      videoRef.current.addEventListener('loadstart', () => console.log('Video: loadstart'))
-      videoRef.current.addEventListener('loadedmetadata', () => console.log('Video: loadedmetadata'))
-      videoRef.current.addEventListener('canplay', () => console.log('Video: canplay'))
-      videoRef.current.addEventListener('playing', () => console.log('Video: playing'))
-      videoRef.current.addEventListener('error', (e) => console.error('Video error:', e))
-      
-      // Force mute on play
-      videoRef.current.addEventListener('play', () => {
-        if (videoRef.current) {
-          console.log('Video play event fired')
-          videoRef.current.muted = isMuted
-          videoRef.current.volume = isMuted ? 0 : 0.7
-        }
-      })
-      
       // Try to play the video
       const playPromise = videoRef.current.play()
       if (playPromise !== undefined) {
-        playPromise
-          .then(() => console.log('Video autoplay successful'))
-          .catch(error => console.error('Video autoplay failed:', error))
+        playPromise.catch(error => console.error('Video autoplay failed:', error))
       }
     }
   }, [])
-
-  // Update video mute state when isMuted changes
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = isMuted
-      videoRef.current.volume = isMuted ? 0 : 0.7
-    }
-  }, [isMuted])
 
   // Handle body scroll lock when mobile menu is open
   useEffect(() => {
@@ -154,26 +126,8 @@ export function Hero() {
               <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Enquire</a>
             </div>
 
-            {/* Right Side - Video Controls + CTA + Mobile Menu */}
+            {/* Right Side - CTA + Mobile Menu */}
             <div className="flex items-center space-x-3 relative">
-              {/* Video Controls with Sound On indicator */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsMuted(!isMuted)}
-                  className="glass-effect p-3 rounded-full text-white hover:bg-white/20 gentle-animation cursor-pointer"
-                >
-                  {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                </button>
-                
-                {/* Sound On indicator - only show when muted */}
-                {isMuted && (
-                  <div className="absolute -bottom-10 right-0 flex items-center text-white/80">
-                    <span className="whitespace-nowrap font-medium text-sm mr-2">Sound On</span>
-                    <span className="text-lg">↗</span>
-                  </div>
-                )}
-              </div>
-              
               {/* CTA Button - Hidden on mobile */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
