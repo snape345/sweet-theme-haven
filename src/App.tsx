@@ -35,6 +35,7 @@ export default function App() {
         </section>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }
