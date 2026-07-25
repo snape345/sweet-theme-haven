@@ -8,14 +8,21 @@ import catActors from '../assets/cat-actors.jpg'
 import catSpeciality from '../assets/cat-speciality.jpg'
 
 export function Awards() {
+  const whatsappPhone = '971528896974'
+
   const categories = [
     { image: catHosts, title: 'Event Hosts & Presenters' },
     { image: catDjs, title: 'Live Music & DJs' },
-    { image: catDancers, title: 'Dancers & Stage Performers' },
+    { image: catDancers,  title: 'Dancers & Stage Performers' },
     { image: catModels, title: 'Models & Brand Ambassadors' },
     { image: catActors, title: 'Actors & Voiceover Talent' },
     { image: catSpeciality, title: 'Speciality & Interactive Entertainment' },
   ]
+
+  const getWhatsAppUrl = (category: string) => {
+    const message = `Hello, I would like to book ${category} for an event in Dubai.`
+    return `https://web.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(message)}`
+  }
 
   return (
     <section id="awards" className="relative py-20 bg-background overflow-hidden">
@@ -46,26 +53,49 @@ export function Awards() {
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((cat, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md"
-              >
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={cat.image}
-                    alt={cat.title}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+              <div key={index} className="flex flex-col gap-4">
+                <div className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-md">
+                  <div className="aspect-[4/5] overflow-hidden">
+                    <img
+                      src={cat.image}
+                      alt={cat.title}
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-2xl font-bold text-white leading-tight">
+                      {cat.title}
+                    </h3>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-2xl font-bold text-white leading-tight">
-                    {cat.title}
-                  </h3>
-                </div>
+
+                <a
+                  href={getWhatsAppUrl(cat.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg active:scale-[0.98]"
+                >
+                  Book Now
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             ))}
           </div>
