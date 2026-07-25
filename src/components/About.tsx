@@ -95,8 +95,11 @@ export function About() {
         <div className="relative max-w-7xl mx-auto">
           
           {/* Film Strip Background */}
-          <div className="relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 rounded-xl overflow-hidden"
-               style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.05)' }}>
+          <div className="relative rounded-xl overflow-hidden"
+               style={{ 
+                 background: 'linear-gradient(90deg, #0f0704 0%, #1a0f08 50%, #0f0704 100%)',
+                 boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.05)' 
+               }}>
             
             {/* Film Perforations - Top - Now animated */}
             <div className="absolute top-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
