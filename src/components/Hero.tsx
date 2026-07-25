@@ -12,7 +12,6 @@ import heroViolinist from '../assets/hero-violinist.mp4.asset.json'
 const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url, heroViolinist.url]
 
 export function Hero() {
-  const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [videoIndex, setVideoIndex] = useState(0)
