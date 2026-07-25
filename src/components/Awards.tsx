@@ -55,12 +55,12 @@ export function Awards() {
             {categories.map((cat, index) => (
               <div key={index} className="flex flex-col gap-3">
                 <div className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md">
-                  <div className="aspect-[3/4] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={cat.image}
                       alt={cat.title}
                       width={1024}
-                      height={1024}
+                      height={768}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
