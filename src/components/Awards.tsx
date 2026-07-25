@@ -10,7 +10,7 @@ const features = [
   },
   {
     icon: <ShieldCheck size={18} />,
-    // title: 'Professional',
+    title: 'Professional',
     copy: "A vetted network of freelance talent, referenced through Dubai's hospitality circles.",
   },
   {
