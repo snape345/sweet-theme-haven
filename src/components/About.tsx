@@ -321,7 +321,7 @@ export function About() {
             
             {/* Caption */}
             <div className="mt-6 text-center">
-              <p className="text-sm text-muted-foreground italic">
+              <p className="text-sm text-amber-200/70 italic">
                 "Curated freelance artists, matched to your room, your clientele, your tempo"
               </p>
             </div>
