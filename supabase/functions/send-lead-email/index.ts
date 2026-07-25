@@ -1,5 +1,5 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
-import { SMTPClient } from 'npm:denomailer@1.6.0'
+import { SMTPClient } from 'https://deno.land/x/denomailer@1.6.0/mod.ts'
 import { z } from 'npm:zod@3.23.8'
 
 const BodySchema = z.object({
@@ -8,8 +8,16 @@ const BodySchema = z.object({
   message: z.string().trim().min(1).max(2000),
 })
 
+const htmlEntities: Record<string, string> = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+}
+
 const escapeHtml = (s: string) =>
-  s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!))
+  s.replace(/[&<>"']/g, (c) => htmlEntities[c] ?? c)
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders })
@@ -24,8 +32,14 @@ Deno.serve(async (req) => {
     }
     const { name, email, message } = parsed.data
 
-    const gmailUser = Deno.env.get('GMAIL_USER')!
-    const gmailPass = Deno.env.get('GMAIL_APP_PASSWORD')!
+    const gmailUser = Deno.env.get('GMAIL_USER')
+    const gmailPass = Deno.env.get('GMAIL_APP_PASSWORD')
+    if (!gmailUser || !gmailPass) {
+      return new Response(JSON.stringify({ error: 'Mail credentials are not configured' }), {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      })
+    }
     const recipient = Deno.env.get('LEAD_RECIPIENT_EMAIL') ?? gmailUser
 
     const client = new SMTPClient({
