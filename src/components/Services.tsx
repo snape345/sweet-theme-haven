@@ -13,60 +13,36 @@ export function Services() {
 
   const services = [
     {
-      id: 'dj-sourcing',
-      title: "Freelance DJ Sourcing",
-      description: "Open-format, house, deep, Afro and Arabic — freelance DJs matched to your venue's room, mood and clientele.",
+      id: 'sourcing',
+      title: "Sourcing",
+      description: "Freelance DJs, vocalists, dancers, violinists and specialty performers matched to your venue's room, mood and clientele.",
       color: 'accent-emerald',
       rotation: 'rotate-2',
-      image: 'https://images.unsplash.com/photo-1571266028243-e4bb35f0f76c?w=400&h=300&fit=crop&auto=format'
-    },
-    {
-      id: 'vocalist-sourcing',
-      title: "Vocalist Sourcing",
-      description: "Live singers for lounge, dining and hotel programming — jazz, soul, acoustic and contemporary sets.",
-      color: 'accent-blue',
-      rotation: '-rotate-1',
-      image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop&auto=format'
-    },
-    {
-      id: 'dancer-sourcing',
-      title: "Dancer & Performer Sourcing",
-      description: "Elegant dancers and specialty performers for immersive lounge nights, private events and hotel programming.",
-      color: 'accent-purple',
-      rotation: 'rotate-1',
-      image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=400&h=300&fit=crop&auto=format'
-    },
-    {
-      id: 'violinist-sourcing',
-      title: "Violinist & Instrumentalist Sourcing",
-      description: "Solo violinists and instrumental ensembles for upscale dining, lounge ambience and signature venue moments.",
-      color: 'accent-emerald',
-      rotation: '-rotate-2',
-      image: 'https://images.unsplash.com/photo-1465821185615-5b4c38c6bda2?w=400&h=300&fit=crop&auto=format'
+      image: serviceSourcing
     },
     {
       id: 'online-promotion',
       title: "Online Promotion",
       description: "Discreet social-media promotion for talent and venue collaborations — thoughtfully produced content that respects your brand.",
-      color: 'accent-emerald',
-      rotation: '-rotate-2',
-      image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400&h=300&fit=crop&auto=format'
+      color: 'accent-blue',
+      rotation: '-rotate-1',
+      image: servicePromotion
     },
     {
       id: 'coordination',
       title: "Booking Coordination",
       description: "A single point of contact for introductions, availability and logistics — no commercial transactions handled online.",
-      color: 'accent-blue',
-      rotation: 'rotate-3',
-      image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop&auto=format'
+      color: 'accent-purple',
+      rotation: 'rotate-1',
+      image: serviceCoordination
     },
     {
       id: 'programming',
       title: "Venue Programming",
       description: "Ongoing calendars for hotels, beach clubs and lounges — the right artist in the right slot, week after week.",
-      color: 'accent-purple',
-      rotation: '-rotate-1',
-      image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=300&fit=crop&auto=format'
+      color: 'accent-emerald',
+      rotation: '-rotate-2',
+      image: serviceProgramming
     }
   ]
 
