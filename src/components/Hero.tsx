@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Volume2, VolumeX, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import heroBg from '../assets/hero-bg.mp4.asset.json'
 import heroSinger from '../assets/hero-singer.mp4.asset.json'
