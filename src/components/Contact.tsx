@@ -1,24 +1,32 @@
 import { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
+import { supabase } from '@/integrations/supabase/client'
 
 export function Contact() {
   const { toast } = useToast()
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast({ title: 'Please fill in all fields', variant: 'destructive' })
       return
     }
     setIsSubmitting(true)
-    // Simulate submission, connect to a backend to actually send
-    setTimeout(() => {
+    try {
+      const { error } = await supabase.functions.invoke('send-lead-email', {
+        body: formData,
+      })
+      if (error) throw error
       toast({ title: 'Message sent!', description: "We'll get back to you soon." })
       setFormData({ name: '', email: '', message: '' })
+    } catch (err) {
+      console.error('Lead submit failed:', err)
+      toast({ title: 'Could not send message', description: 'Please try again shortly.', variant: 'destructive' })
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   return (
