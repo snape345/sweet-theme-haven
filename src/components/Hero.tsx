@@ -151,7 +151,6 @@ export function Hero() {
               <a href="#portfolio" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Roster</a>
               <a href="#about" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">How It Works</a>
               <a href="#services" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Services</a>
-              <a href="#team" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Team</a>
               <a href="#contact" className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105">Enquire</a>
             </div>
 
@@ -254,13 +253,6 @@ export function Hero() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
-              </a>
-              <a 
-                href="#team" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Team
               </a>
               <a 
                 href="#contact" 
