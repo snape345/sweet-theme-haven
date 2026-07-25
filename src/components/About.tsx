@@ -143,11 +143,11 @@ export function About() {
                 {processSteps.map((step, index) => (
                   <div
                     key={step.number}
-                    className={`flex-shrink-0 w-80 h-52 bg-background rounded-lg border-4 ${
+                    className={`flex-shrink-0 w-80 h-52 rounded-lg border-4 ${
                       activeFrame >= index 
-                        ? `border-${step.color}` 
-                        : 'border-gray-600'
-                    }`}
+                        ? step.color === 'amber-500' ? 'border-amber-500' : step.color === 'amber-600' ? 'border-amber-600' : 'border-rose-400'
+                        : 'border-stone-700'
+                    } bg-gradient-to-br from-stone-900 via-[#1a0f08] to-stone-950`}
                     style={{
                       boxShadow: '0 8px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
                     }}
@@ -157,7 +157,7 @@ export function About() {
                     <div className="relative h-full p-6 flex flex-col justify-between">
                       
                       {/* Frame Number Badge */}
-                      <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center font-black z-10 border-3 border-white text-lg"
+                      <div className="absolute -top-4 -left-4 w-12 h-12 bg-amber-100 text-stone-900 rounded-full flex items-center justify-center font-black z-10 border-3 border-amber-200 text-lg"
                            style={{ boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }}>
                         {step.number}
                       </div>
@@ -166,21 +166,21 @@ export function About() {
                       <div className="opacity-100">
                         
                         {/* Step Title */}
-                        <h3 className="font-black text-xl leading-tight mb-4 text-foreground">
+                        <h3 className="font-black text-xl leading-tight mb-4 text-amber-100">
                           {step.title}
                         </h3>
                         
                         {/* Step Description */}
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-amber-200/80 leading-relaxed">
                           {step.description}
                         </p>
                       </div>
                       
                       {/* Film frame edge lines */}
-                      <div className="absolute left-1 top-1 bottom-1 w-px bg-gray-300/20" />
-                      <div className="absolute right-1 top-1 bottom-1 w-px bg-gray-300/20" />
-                      <div className="absolute top-1 left-1 right-1 h-px bg-gray-300/20" />
-                      <div className="absolute bottom-1 left-1 right-1 h-px bg-gray-300/20" />
+                      <div className="absolute left-1 top-1 bottom-1 w-px bg-amber-100/10" />
+                      <div className="absolute right-1 top-1 bottom-1 w-px bg-amber-100/10" />
+                      <div className="absolute top-1 left-1 right-1 h-px bg-amber-100/10" />
+                      <div className="absolute bottom-1 left-1 right-1 h-px bg-amber-100/10" />
                     </div>
                   </div>
                 ))}
