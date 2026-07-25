@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import storyboardImage from '@/assets/storyboard-image.avif'
 
 export function About() {
   const [activeFrame, setActiveFrame] = useState(-1)
@@ -286,50 +285,6 @@ export function About() {
           </div>
         </div>
 
-        {/* AI Generated Content Gallery */}
-        <div className="mt-20">
-          <div className="text-center mb-8">
-            <p className="text-amber-200/80">
-              A glimpse of the artists we source across Dubai's rooms
-            </p>
-          </div>
-          
-          {/* Gallery Image */}
-          <div className="relative max-w-6xl mx-auto">
-            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-4 overflow-hidden">
-              
-              {/* Film grain overlay for authenticity */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                   style={{
-                     backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.8) 1px, transparent 0)`,
-                     backgroundSize: '4px 4px'
-                   }} />
-              
-              {/* Main gallery image */}
-              <img 
-                src={storyboardImage}
-                alt="A snapshot of Talent Source ME's freelance DJs, vocalists and performers across Dubai"
-                className="w-full h-auto rounded-xl"
-                style={{
-                  filter: 'contrast(1.05) saturate(1.1) brightness(0.95)'
-                }}
-              />
-              
-              {/* Subtle overlay gradient for depth */}
-              <div className="absolute inset-4 rounded-xl pointer-events-none"
-                   style={{
-                      background: 'linear-gradient(135deg, rgba(251,191,36,0.03) 0%, transparent 20%, transparent 80%, rgba(225,29,72,0.03) 100%)'
-                   }} />
-            </div>
-            
-            {/* Caption */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-amber-200/70 italic">
-                "Curated freelance artists, matched to your room, your clientele, your tempo"
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       
     </section>
