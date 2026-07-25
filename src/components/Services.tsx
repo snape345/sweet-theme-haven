@@ -136,7 +136,7 @@ export function Services() {
                        ),
                        repeating-linear-gradient(
                          -45deg,
-                         rgba(160, inviting,82,45,0.5) 0px,
+                         rgba(160,82,45,0.5) 0px,
                          transparent 2px,
                          rgba(139,69,19,0.6) 4px,
                          rgba(101,67,33,0.4) 6px,
