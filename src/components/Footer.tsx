@@ -16,7 +16,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative py-20 bg-foreground text-background">
+    <footer className="relative py-20 bg-[#0d0603] text-background border-t border-amber-200/10">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-12 gap-12">
           {/* Logo and Description */}

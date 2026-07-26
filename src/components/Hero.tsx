@@ -92,6 +92,11 @@ export function Hero() {
         Your browser does not support the video tag.
       </video>
 
+      {/* Cinematic vignette + blend into the next section */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/50" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
+
+
       {/* Full-Width Navbar */}
       <motion.nav
         initial={{ opacity: 0, y: -30 }}
@@ -136,7 +141,7 @@ export function Hero() {
                   const contactSection = document.getElementById('contact')
                   contactSection?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
+                className="hidden sm:block bg-amber-500 text-stone-950 font-semibold px-6 py-3 rounded-md hover:bg-amber-400 gentle-animation ml-4 cursor-pointer"
               >
                 Enquire
               </motion.button>
@@ -226,7 +231,7 @@ export function Hero() {
                 contactSection?.scrollIntoView({ behavior: 'smooth' })
                 setIsMobileMenuOpen(false)
               }}
-              className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
+              className="bg-amber-500 text-stone-950 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 active:bg-amber-600 gentle-animation mt-8 cursor-pointer"
             >
               Enquire
             </motion.button>
