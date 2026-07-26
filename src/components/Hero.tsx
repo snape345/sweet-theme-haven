@@ -95,7 +95,7 @@ export function Hero() {
       {/* Cinematic vignette + blend into the next section */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
       <div className="pointer-events-none absolute inset-y-0 left-0 w-full sm:w-2/3 lg:w-1/2 bg-gradient-to-r from-black/60 via-black/15 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white z-30" />
 
 
       {/* Full-Width Navbar */}

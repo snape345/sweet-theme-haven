@@ -16,16 +16,16 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative py-20 bg-[#0d0603] text-background border-t border-amber-200/10">
+    <footer className="relative py-20 bg-white text-stone-900 border-t border-stone-200">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-12 gap-12">
           {/* Logo and Description */}
           <div className="col-span-12 md:col-span-4">
             <div>
-              <div className="font-poppins text-background text-3xl tracking-wider mb-4">
+              <div className="font-poppins text-stone-900 text-3xl tracking-wider mb-4">
                 TALENT SOURCE ME
               </div>
-              <p className="text-background/70 leading-relaxed mb-6">
+              <p className="text-stone-600 leading-relaxed mb-6">
                 A discreet Dubai-based sourcing concept connecting hotels, lounges and beach clubs
                 with freelance DJs, singers, dancers and performers. Launching soon.
               </p>
@@ -38,7 +38,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:scale-110 gentle-animation cursor-pointer"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#E5E7EB">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#111827">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
                 </a>
@@ -92,10 +92,10 @@ export function Footer() {
           {/* Tools We Use Section */}
           <div className="col-span-12 md:col-span-8">
             <div>
-              <h4 className="font-black text-2xl text-background mb-4">VENUES WE PROGRAMME</h4>
+              <h4 className="font-black text-2xl text-stone-900 mb-4">VENUES WE PROGRAMME</h4>
               
               {/* Industries Description */}
-              <p className="text-background/70 text-base mb-8 leading-relaxed">
+              <p className="text-stone-600 text-base mb-8 leading-relaxed">
                 From heritage hotels to breakout beach clubs, we source freelance talent for
                 every room that shapes a Dubai night.
               </p>
@@ -104,7 +104,7 @@ export function Footer() {
                 {aiTools.map((tool, index) => (
                   <div
                     key={tool}
-                    className="text-background/80 hover:text-background gentle-animation text-sm font-medium"
+                    className="text-stone-600 hover:text-stone-900 gentle-animation text-sm font-medium"
                   >
                     {tool}
                   </div>
@@ -115,12 +115,12 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar - Simplified */}
-        <div className="border-t border-background/20 pt-8 mt-16">
+        <div className="border-t border-stone-200 pt-8 mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-background/70 mb-4 md:mb-0">
+            <div className="text-sm text-stone-600 mb-4 md:mb-0">
               © {new Date().getFullYear()} Talent Source ME. All rights reserved.
             </div>
-            <div className="text-sm text-background/70">
+            <div className="text-sm text-stone-600">
               DUBAI, UNITED ARAB EMIRATES · HELLO@TALENTSOURCE.ME
             </div>
           </div>
