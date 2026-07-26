@@ -61,7 +61,7 @@ export function Awards() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
             {categories.map((cat, index) => (
               <div key={index} className="flex flex-col gap-3">
-                <div className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-md">
+                <div className="group relative overflow-hidden rounded-xl border border-amber-200/10 bg-stone-950/60 shadow-[0_20px_50px_-25px_rgba(0,0,0,0.9)]">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={cat.image}
