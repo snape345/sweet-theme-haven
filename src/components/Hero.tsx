@@ -226,7 +226,7 @@ export function Hero() {
                 contactSection?.scrollIntoView({ behavior: 'smooth' })
                 setIsMobileMenuOpen(false)
               }}
-              className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
+              className="bg-amber-500 text-stone-950 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 active:bg-amber-600 gentle-animation mt-8 cursor-pointer"
             >
               Enquire
             </motion.button>
