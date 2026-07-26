@@ -82,46 +82,46 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="p-8 space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">Name</label>
+                  <label htmlFor="name" className="block text-sm font-semibold text-amber-100/80 mb-2">Name</label>
                   <input
                     id="name"
                     type="text"
                     maxLength={100}
                     value={formData.name}
                     onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-black/40 border border-amber-200/15 text-amber-50 placeholder:text-amber-100/30 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">Email</label>
+                  <label htmlFor="email" className="block text-sm font-semibold text-amber-100/80 mb-2">Email</label>
                   <input
                     id="email"
                     type="email"
                     maxLength={255}
                     value={formData.email}
                     onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-black/40 border border-amber-200/15 text-amber-50 placeholder:text-amber-100/30 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-semibold text-amber-100/80 mb-2">Message</label>
                 <textarea
                   id="message"
                   rows={5}
                   maxLength={1000}
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-black/40 border border-amber-200/15 text-amber-50 placeholder:text-amber-100/30 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all resize-none"
                   placeholder="Venue, dates, mood, anything you'd like us to know"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-foreground text-background font-black text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                className="w-full py-4 rounded-xl bg-amber-500 text-stone-950 font-black text-lg hover:bg-amber-400 transition-colors disabled:opacity-50"
               >
                 {isSubmitting ? 'Sending...' : 'Submit Enquiry'}
               </button>
@@ -131,38 +131,21 @@ export function Contact() {
 
         {/* Bottom Info */}
         <div className="text-center mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
-              <div className="w-12 h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-6 h-6 bg-accent-blue rounded-full" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { n: '01', t: 'Inquire', d: 'Share your venue, dates and the mood you have in mind' },
+              { n: '02', t: 'Get Matched', d: 'A shortlist of freelance DJs, vocalists, dancers or performers' },
+              { n: '03', t: 'Coordinate', d: 'Introductions, timing and light online promotion, no online payments' },
+            ].map((s) => (
+              <div key={s.n} className="rounded-2xl border border-amber-200/10 bg-stone-950/40 p-6 text-left">
+                <div className="text-amber-500 font-black text-sm tracking-[0.2em] mb-3">{s.n}</div>
+                <h4 className="font-black text-amber-50 mb-2">{s.t}</h4>
+                <p className="text-amber-100/50 text-sm leading-relaxed">{s.d}</p>
               </div>
-              <h4 className="font-black text-foreground mb-2">Inquire</h4>
-              <p className="text-muted-foreground text-sm">
-                Share your venue, dates and the mood you have in mind
-              </p>
-            </div>
-            
-            <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
-              <div className="w-12 h-12 bg-accent-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-6 h-6 bg-accent-emerald rounded-full" />
-              </div>
-              <h4 className="font-black text-foreground mb-2">Get Matched</h4>
-              <p className="text-muted-foreground text-sm">
-                A shortlist of freelance DJs, vocalists, dancers or performers
-              </p>
-            </div>
-            
-            <div className="bg-background clean-border rounded-2xl p-6 subtle-shadow">
-              <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-6 h-6 bg-accent-purple rounded-full" />
-              </div>
-              <h4 className="font-black text-foreground mb-2">Coordinate</h4>
-              <p className="text-muted-foreground text-sm">
-                Introductions, timing and light online promotion, no online payments
-              </p>
-            </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   )
