@@ -53,23 +53,23 @@ export function Services() {
 
   return (
     <section id="services" className="relative py-20" style={{
-      background: 'linear-gradient(135deg, #2d1810 0%, #1a0f08 30%, #0f0704 60%, #1a0f08 100%)',
+      background: 'linear-gradient(135deg, #ffffff 0%, #faf7f3 30%, #ffffff 60%, #faf7f3 100%)',
       overflow: 'visible'
     }}>
       
       {/* Photo Lab Background Elements */}
       <div className="absolute inset-0">
         {/* Darkroom ambient lighting effect */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-900/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-amber-900/15 rounded-full blur-2xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-200/25 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-amber-200/30 rounded-full blur-2xl" />
         
         {/* Equipment silhouettes */}
-        <div className="absolute bottom-8 left-8 w-16 h-24 bg-black/40 rounded-t-lg transform rotate-3" />
-        <div className="absolute bottom-8 right-8 w-12 h-20 bg-black/30 rounded-lg transform -rotate-2" />
+        <div className="absolute bottom-8 left-8 w-16 h-24 bg-stone-200/60 rounded-t-lg transform rotate-3" />
+        <div className="absolute bottom-8 right-8 w-12 h-20 bg-stone-200/50 rounded-lg transform -rotate-2" />
         
         {/* Chemical trays suggestion */}
-        <div className="absolute bottom-12 left-1/4 w-32 h-8 bg-black/30 rounded-lg transform rotate-1" />
-        <div className="absolute bottom-12 right-1/4 w-28 h-6 bg-black/25 rounded-lg transform -rotate-1" />
+        <div className="absolute bottom-12 left-1/4 w-32 h-8 bg-stone-200/50 rounded-lg transform rotate-1" />
+        <div className="absolute bottom-12 right-1/4 w-28 h-6 bg-stone-200/40 rounded-lg transform -rotate-1" />
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -80,19 +80,19 @@ export function Services() {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
-            <span className="text-sm font-semibold text-amber-200/80">
+            <span className="text-sm font-semibold text-stone-600">
               What We Quietly Do
             </span>
             <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse" />
           </div>
           
-          <h2 className={`text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-amber-100 transform transition-all duration-1000 delay-200 ${
+          <h2 className={`text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-stone-900 transform transition-all duration-1000 delay-200 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
             Services
           </h2>
           
-          <p className={`text-xl text-amber-200/90 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
+          <p className={`text-xl text-stone-600 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             Four focused offerings, sourcing, promotion and coordination for Dubai's premium hospitality
@@ -316,7 +316,7 @@ export function Services() {
           
           {/* Darkroom atmosphere note */}
           <div className="mt-16 text-center">
-            <p className="text-sm text-amber-200/70 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-sm text-stone-600 leading-relaxed max-w-2xl mx-auto">
               Every shortlist is developed with the care of a darkroom print, quietly, deliberately, and matched to the room it will play in.
             </p>
           </div>
