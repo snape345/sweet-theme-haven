@@ -92,6 +92,11 @@ export function Hero() {
         Your browser does not support the video tag.
       </video>
 
+      {/* Cinematic vignette + blend into the next section */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/50" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
+
+
       {/* Full-Width Navbar */}
       <motion.nav
         initial={{ opacity: 0, y: -30 }}
