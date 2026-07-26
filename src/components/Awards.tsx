@@ -84,7 +84,7 @@ export function Awards() {
                   href={getWhatsAppUrl(cat.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg active:scale-[0.98]"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-5 py-2.5 text-sm font-semibold text-amber-100 transition-all hover:bg-amber-500 hover:text-stone-950 active:scale-[0.98]"
                 >
                   Book Now
                   <svg
