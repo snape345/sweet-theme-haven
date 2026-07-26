@@ -136,7 +136,7 @@ export function Hero() {
                   const contactSection = document.getElementById('contact')
                   contactSection?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
+                className="hidden sm:block bg-amber-500 text-stone-950 font-semibold px-6 py-3 rounded-md hover:bg-amber-400 gentle-animation ml-4 cursor-pointer"
               >
                 Enquire
               </motion.button>
