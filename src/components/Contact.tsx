@@ -33,47 +33,47 @@ export function Contact() {
     <section
       id="contact"
       className="relative py-28 overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #faf7f3 40%, #ffffff 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #1a0f08 0%, #2d1810 40%, #120804 100%)' }}
     >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent" />
-      <div className="pointer-events-none absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-rose-200/20 blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0f0704] to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-rose-900/10 blur-3xl" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-700">
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
               A Quiet Conversation
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-8 text-stone-900">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-8 text-amber-50">
             <span className="block mb-2">Source Talent. Programme Nights.</span>
           </h2>
 
-          <p className="text-lg lg:text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-xl text-amber-100/60 max-w-3xl mx-auto leading-relaxed">
             Tell us about your venue, dates and the mood you have in mind, we'll come back with a shortlist.
           </p>
         </div>
 
         {/* Contact Form */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white border border-stone-200 backdrop-blur-sm rounded-3xl overflow-hidden shadow-[0_30px_80px_-45px_rgba(0,0,0,0.3)]">
-            <div className="px-8 py-6 border-b border-stone-200">
+          <div className="bg-stone-950/60 border border-amber-200/10 backdrop-blur-sm rounded-3xl overflow-hidden shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)]">
+            <div className="px-8 py-6 border-b border-amber-200/10">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-black text-stone-900 mb-1">
+                  <h3 className="text-xl font-black text-amber-50 mb-1">
                     Enquire
                   </h3>
-                  <p className="text-stone-500 text-sm">
+                  <p className="text-amber-100/50 text-sm">
                     Share your brief, a single point of contact will reply discreetly
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
                   <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-                  <span className="text-sm text-stone-500 font-medium">Launching soon · Dubai</span>
+                  <span className="text-sm text-amber-100/50 font-medium">Launching soon · Dubai</span>
                 </div>
               </div>
             </div>
@@ -82,39 +82,39 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="p-8 space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-stone-700 mb-2">Name</label>
+                  <label htmlFor="name" className="block text-sm font-semibold text-amber-100/80 mb-2">Name</label>
                   <input
                     id="name"
                     type="text"
                     maxLength={100}
                     value={formData.name}
                     onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-black/40 border border-amber-200/15 text-amber-50 placeholder:text-amber-100/30 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-stone-700 mb-2">Email</label>
+                  <label htmlFor="email" className="block text-sm font-semibold text-amber-100/80 mb-2">Email</label>
                   <input
                     id="email"
                     type="email"
                     maxLength={255}
                     value={formData.email}
                     onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-black/40 border border-amber-200/15 text-amber-50 placeholder:text-amber-100/30 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-stone-700 mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-semibold text-amber-100/80 mb-2">Message</label>
                 <textarea
                   id="message"
                   rows={5}
                   maxLength={1000}
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-black/40 border border-amber-200/15 text-amber-50 placeholder:text-amber-100/30 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-400/40 transition-all resize-none"
                   placeholder="Venue, dates, mood, anything you'd like us to know"
                 />
               </div>
@@ -137,10 +137,10 @@ export function Contact() {
               { n: '02', t: 'Get Matched', d: 'A shortlist of freelance DJs, vocalists, dancers or performers' },
               { n: '03', t: 'Coordinate', d: 'Introductions, timing and light online promotion, no online payments' },
             ].map((s) => (
-              <div key={s.n} className="rounded-2xl border border-stone-200 bg-white p-6 text-left">
-                <div className="text-stone-9000 font-black text-sm tracking-[0.2em] mb-3">{s.n}</div>
-                <h4 className="font-black text-stone-900 mb-2">{s.t}</h4>
-                <p className="text-stone-500 text-sm leading-relaxed">{s.d}</p>
+              <div key={s.n} className="rounded-2xl border border-amber-200/10 bg-stone-950/40 p-6 text-left">
+                <div className="text-amber-500 font-black text-sm tracking-[0.2em] mb-3">{s.n}</div>
+                <h4 className="font-black text-amber-50 mb-2">{s.t}</h4>
+                <p className="text-amber-100/50 text-sm leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>

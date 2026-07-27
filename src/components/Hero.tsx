@@ -93,9 +93,8 @@ export function Hero() {
       </video>
 
       {/* Cinematic vignette + blend into the next section */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-full sm:w-2/3 lg:w-1/2 bg-gradient-to-r from-black/60 via-black/15 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white z-30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/50" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
 
 
       {/* Full-Width Navbar */}
@@ -250,11 +249,11 @@ export function Hero() {
         className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
       >
         <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.85)]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white">
             <span className="block">TALENT FOR DUBAI'S</span>
             <span className="block">FINEST VENUES</span>
           </h1>
-          <p className="mt-4 text-white/90 text-base sm:text-lg max-w-xl [text-shadow:0_1px_12px_rgba(0,0,0,0.8)]">
+          <p className="mt-4 text-white/80 text-base sm:text-lg max-w-xl">
             Freelance DJs, vocalists, dancers, violinists and performers, sourced discreetly for hotels, lounges and beach clubs across Dubai.
           </p>
         </div>
