@@ -7,7 +7,7 @@ export function WhatsAppButton() {
   const whatsappPhone = '971528896974'
   const whatsappMessage =
     'Hello, I would like to inquire about your talent services'
-  const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
+  const whatsappWebUrl = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(
     whatsappMessage
   )}`
 
