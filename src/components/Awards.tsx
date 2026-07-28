@@ -21,7 +21,7 @@ export function Awards() {
 
   const getWhatsAppUrl = (category: string) => {
     const message = `Hello, I would like to book ${category} for an event in Dubai.`
-    return `https://web.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(message)}`
+    return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`
   }
 
   return (
