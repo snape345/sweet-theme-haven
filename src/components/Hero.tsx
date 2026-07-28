@@ -5,11 +5,11 @@ import { Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import heroBg from '../assets/hero-bg.mp4.asset.json'
 import heroSinger from '../assets/hero-singer.mp4.asset.json'
-import heroDancerHiphop from '../assets/hero-dancer-hiphop.mp4.asset.json'
+
 import heroDancerSalsa from '../assets/hero-dancer-salsa.mp4.asset.json'
 import heroViolinist from '../assets/hero-violinist.mp4.asset.json'
 
-const heroVideos = [heroBg.url, heroSinger.url, heroDancerHiphop.url, heroDancerSalsa.url, heroViolinist.url]
+const heroVideos = [heroBg.url, heroSinger.url, heroDancerSalsa.url, heroViolinist.url]
 
 export function Hero() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -93,8 +93,8 @@ export function Hero() {
       </video>
 
       {/* Cinematic vignette + blend into the next section */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/50" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-[#0b0503]/70 to-[#0b0503] z-30" />
 
 
       {/* Full-Width Navbar */}
