@@ -249,11 +249,11 @@ export function Hero() {
         className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
       >
         <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.85)]">
             <span className="block">TALENT FOR DUBAI'S</span>
             <span className="block">FINEST VENUES</span>
           </h1>
-          <p className="mt-4 text-white/80 text-base sm:text-lg max-w-xl">
+          <p className="mt-4 text-white/90 text-base sm:text-lg max-w-xl [text-shadow:0_2px_16px_rgba(0,0,0,0.9)]">
             Freelance DJs, vocalists, dancers, violinists and performers, sourced discreetly for hotels, lounges and beach clubs across Dubai.
           </p>
         </div>
