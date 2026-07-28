@@ -82,7 +82,7 @@ export function Hero() {
       <video
         ref={videoRef}
         key={heroVideos[videoIndex]}
-        className="absolute inset-0 w-full h-full object-cover scale-110"
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
         playsInline
