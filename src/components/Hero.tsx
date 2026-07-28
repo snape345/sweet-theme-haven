@@ -92,9 +92,9 @@ export function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Cinematic vignette + blend into the next section */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-[#0b0503]/70 to-[#0b0503] z-30" />
+      {/* Light vignette + readable gradient behind the headline, keeps the footage sharp */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/25" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-[#0b0503]/60 to-[#0b0503] z-30" />
 
 
       {/* Full-Width Navbar */}
