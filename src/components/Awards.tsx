@@ -30,8 +30,6 @@ export function Awards() {
       className="relative py-24 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #0b0503 0%, #1a0f08 45%, #2d1810 100%)' }}
     >
-      {/* Blend from hero into the section */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
       <div className="pointer-events-none absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-amber-900/15 blur-3xl" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
