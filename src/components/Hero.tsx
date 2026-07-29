@@ -93,8 +93,9 @@ export function Hero() {
       </video>
 
       {/* Light vignette + readable gradient behind the headline, keeps the footage sharp */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/25" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-[#0b0503]/60 to-[#0b0503] z-30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
+
 
 
       {/* Full-Width Navbar */}
