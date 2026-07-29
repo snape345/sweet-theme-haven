@@ -253,15 +253,22 @@ export function Hero() {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
       >
-        <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.85)]">
+        <div className="max-w-3xl">
+          <div className="mb-4 inline-flex items-center gap-3">
+            <span className="h-[2px] w-10 bg-amber-400" />
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">
+              Talent Sourcing, Dubai
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.95)]">
             <span className="block">TALENT FOR DUBAI'S</span>
             <span className="block">FINEST VENUES</span>
           </h1>
-          <p className="mt-4 text-white/90 text-base sm:text-lg max-w-xl [text-shadow:0_2px_16px_rgba(0,0,0,0.9)]">
+          <p className="mt-5 text-white/90 text-base sm:text-lg max-w-xl [text-shadow:0_2px_16px_rgba(0,0,0,0.95)]">
             Freelance DJs, vocalists, dancers, violinists and performers, sourced discreetly for hotels, lounges and beach clubs across Dubai.
           </p>
         </div>
+
       </motion.div>
 
 
