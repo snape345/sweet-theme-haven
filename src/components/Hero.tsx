@@ -97,7 +97,7 @@ export function Hero() {
 
       {/* Crisp defined edge between hero and the next section */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-gradient-to-b from-transparent to-[#0b0503] z-30" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-amber-500/40 z-30" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent z-30" />
 
 
 
