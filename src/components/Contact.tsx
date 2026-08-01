@@ -64,16 +64,16 @@ export function Contact() {
             <div className="px-8 py-6 border-b border-amber-200/10">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-black text-amber-50 mb-1">
-                    Enquire
+                  <h3 className="text-xl font-bold text-amber-50 mb-1">
+                    Send us your brief
                   </h3>
                   <p className="text-amber-100/50 text-sm">
-                    Share your brief, a single point of contact will reply discreetly
+                    A single point of contact will reply to you directly.
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
                   <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-                  <span className="text-sm text-amber-100/50 font-medium">Launching soon · Dubai</span>
+                  <span className="text-sm text-amber-100/50 font-medium">Dubai, UAE</span>
                 </div>
               </div>
             </div>
