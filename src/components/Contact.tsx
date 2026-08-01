@@ -42,7 +42,7 @@ export function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-crimson-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
               Get In Touch
             </span>
@@ -72,7 +72,7 @@ export function Contact() {
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-crimson-500 rounded-full animate-pulse" />
                   <span className="text-sm text-amber-100/50 font-medium">Dubai, UAE</span>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-amber-500 text-stone-950 font-bold text-lg hover:bg-amber-400 transition-colors disabled:opacity-50"
+                className="w-full py-4 rounded-full bg-crimson-600 text-cream font-bold text-base uppercase tracking-wide hover:bg-crimson-500 transition-colors disabled:opacity-50"
               >
                 {isSubmitting ? 'Sending...' : 'Submit enquiry'}
               </button>
@@ -138,7 +138,7 @@ export function Contact() {
               href="https://wa.me/971528896974"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-6 py-3 text-sm font-semibold text-amber-100 transition-all hover:bg-amber-500 hover:text-stone-950"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-crimson-500/50 bg-crimson-600/10 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-cream transition-all hover:bg-crimson-600 hover:border-crimson-600"
             >
               Chat on WhatsApp
             </a>

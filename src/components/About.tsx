@@ -74,7 +74,7 @@ export function About() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse" />
+            <div className="w-3 h-3 bg-crimson-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-amber-200/80">
               Process
             </span>
