@@ -68,7 +68,7 @@ export function Services() {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
           >
-            <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-crimson-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
               What We Do
             </span>

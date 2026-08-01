@@ -36,7 +36,7 @@ export function Awards() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-crimson-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
               Our Roster
             </span>
@@ -81,7 +81,7 @@ export function Awards() {
                   href={getWhatsAppUrl(cat.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-5 py-2.5 text-sm font-semibold text-amber-100 transition-all hover:bg-amber-500 hover:text-stone-950 active:scale-[0.98]"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full border border-crimson-500/50 bg-crimson-600/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-cream transition-all hover:bg-crimson-600 hover:border-crimson-600 active:scale-[0.98]"
                 >
                   Request talent
                   <svg

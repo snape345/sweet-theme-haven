@@ -146,7 +146,7 @@ export function Hero() {
                   const contactSection = document.getElementById('contact')
                   contactSection?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="hidden sm:block bg-amber-500 text-stone-950 font-semibold px-6 py-3 rounded-md hover:bg-amber-400 gentle-animation ml-4 cursor-pointer"
+                className="hidden sm:block bg-crimson-600 text-cream font-semibold px-7 py-3 rounded-full tracking-wide uppercase text-sm hover:bg-crimson-500 gentle-animation ml-4 cursor-pointer"
               >
                 Enquire
               </motion.button>
@@ -236,7 +236,7 @@ export function Hero() {
                 contactSection?.scrollIntoView({ behavior: 'smooth' })
                 setIsMobileMenuOpen(false)
               }}
-              className="bg-amber-500 text-stone-950 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 active:bg-amber-600 gentle-animation mt-8 cursor-pointer"
+              className="bg-crimson-600 text-cream font-semibold px-7 py-3 rounded-full tracking-wide uppercase text-sm hover:bg-crimson-500 active:bg-crimson-700 gentle-animation mt-8 cursor-pointer"
             >
               Enquire
             </motion.button>
