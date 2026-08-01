@@ -246,23 +246,29 @@ export function Hero() {
 
 
 
-      {/* Big Studio Title - Lower Left */}
+      {/* Headline block, cabaret-poster style */}
       <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute inset-x-0 bottom-14 sm:bottom-20 z-40 px-6 sm:px-8 lg:px-12"
       >
-        <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.95)]">
-            <span className="block">Talent for Dubai's</span>
-            <span className="block">finest venues</span>
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-extrabold leading-[1.02] tracking-tight text-cream [text-shadow:0_4px_30px_rgba(0,0,0,0.95)]">
+            Talent for Dubai's finest venues
           </h1>
-          <p className="mt-5 text-white/90 text-base sm:text-lg max-w-2xl [text-shadow:0_2px_16px_rgba(0,0,0,0.95)]">
+          <p className="mx-auto mt-6 max-w-2xl text-white/85 text-base sm:text-lg leading-relaxed [text-shadow:0_2px_16px_rgba(0,0,0,0.95)]">
             Talent Source ME curates and coordinates professional DJs, vocalists, dancers, musicians and speciality performers for hotels, lounges, beach clubs and private events across Dubai and the UAE.
           </p>
+          <motion.button
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="mt-8 inline-flex items-center justify-center rounded-full border-2 border-cream/80 bg-transparent px-10 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:bg-crimson-600 hover:border-crimson-600 cursor-pointer"
+          >
+            Enquire
+          </motion.button>
         </div>
-
       </motion.div>
 
 
