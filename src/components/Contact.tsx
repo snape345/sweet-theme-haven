@@ -44,17 +44,17 @@ export function Contact() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
-              A Quiet Conversation
+              Get In Touch
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-8 text-amber-50">
-            <span className="block mb-2">Source Talent. Programme Nights.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-amber-50">
+            Enquire
           </h2>
 
           <p className="text-lg lg:text-xl text-amber-100/60 max-w-3xl mx-auto leading-relaxed">
-            Tell us about your venue, dates and the mood you have in mind, we'll come back with a shortlist.
+            Tell us about your venue, dates and the mood you have in mind. We will send you a curated shortlist of performers.
           </p>
         </div>
 
