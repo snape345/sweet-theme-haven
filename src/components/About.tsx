@@ -76,17 +76,17 @@ export function About() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-amber-200/80">
-              How It Works
+              Process
             </span>
             <div className="w-3 h-3 bg-rose-400 rounded-full animate-pulse" />
           </div>
-          
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-amber-100">
-            From Enquiry to Encore
+
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-amber-100">
+            How it works
           </h2>
-          
+
           <p className="text-xl text-amber-200/80 leading-relaxed max-w-3xl mx-auto">
-            A quiet, considered flow, designed around the tempo of premium hospitality in Dubai
+            From enquiry to performance
           </p>
         </div>
 
