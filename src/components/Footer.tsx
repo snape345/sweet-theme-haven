@@ -26,8 +26,8 @@ export function Footer() {
                 TALENT SOURCE ME
               </div>
               <p className="text-background/70 leading-relaxed mb-6">
-                A discreet Dubai-based sourcing concept connecting hotels, lounges and beach clubs
-                with freelance DJs, singers, dancers and performers. Launching soon.
+                Talent Source ME curates and coordinates professional DJs, vocalists, dancers,
+                musicians and speciality performers for venues and events across Dubai and the UAE.
               </p>
               {/* Social Media Icons */}
               <div className="flex items-center space-x-6">
