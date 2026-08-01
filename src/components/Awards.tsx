@@ -83,7 +83,7 @@ export function Awards() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-5 py-2.5 text-sm font-semibold text-amber-100 transition-all hover:bg-amber-500 hover:text-stone-950 active:scale-[0.98]"
                 >
-                  Book Now
+                  Request talent
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="14"
