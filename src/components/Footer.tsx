@@ -116,12 +116,12 @@ export function Footer() {
 
         {/* Bottom Bar - Simplified */}
         <div className="border-t border-background/20 pt-8 mt-16">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-background/70 mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+            <div className="text-sm text-background/70">
               © {new Date().getFullYear()} Talent Source ME. All rights reserved.
             </div>
-            <div className="text-sm text-background/70">
-              DUBAI, UNITED ARAB EMIRATES · HELLO@TALENTSOURCE.ME
+            <div className="text-sm text-background/70 text-center md:text-right">
+              Dubai, United Arab Emirates · hello@talentsource.me · WhatsApp: +971 52 889 6974
             </div>
           </div>
         </div>
