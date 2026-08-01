@@ -125,7 +125,7 @@ export function Services() {
 
         <div className="mt-16 text-center">
           <p className="text-sm text-amber-200/60 leading-relaxed max-w-2xl mx-auto">
-            Every shortlist is built quietly, deliberately, and matched to the room it will play in.
+            Every shortlist is matched to your venue, your audience and the night you are planning.
           </p>
         </div>
       </div>
