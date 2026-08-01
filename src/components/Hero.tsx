@@ -254,12 +254,6 @@ export function Hero() {
         className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
       >
         <div className="max-w-3xl">
-          <div className="mb-4 inline-flex items-center gap-3">
-            <span className="h-[2px] w-10 bg-amber-400" />
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-amber-300">
-              Talent Sourcing, Dubai
-            </span>
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.95)]">
             <span className="block">Talent for Dubai's</span>
             <span className="block">finest venues</span>

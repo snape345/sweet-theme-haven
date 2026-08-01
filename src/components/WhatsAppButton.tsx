@@ -22,9 +22,6 @@ export function WhatsAppButton() {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
       }`}
     >
-      <span className="hidden sm:inline-block text-sm font-semibold text-foreground bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full border border-border subtle-shadow">
-        Chat on WhatsApp
-      </span>
       <a
         href={whatsappWebUrl}
         target="_blank"

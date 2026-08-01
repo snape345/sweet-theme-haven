@@ -253,37 +253,6 @@ export function About() {
           )}
         </div>
 
-        {/* Film Controls */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-6 rounded-2xl px-8 py-4" style={{
-            background: 'rgba(26, 15, 8, 0.7)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(251, 191, 36, 0.15)'
-          }}>
-            
-            {/* Film Speed Indicator */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-amber-100">Freelance Roster</span>
-            </div>
-            
-            <div className="w-px h-6 bg-amber-100/20" />
-            
-            {/* Duration */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}} />
-              <span className="text-sm font-semibold text-amber-100">Dubai Native</span>
-            </div>
-            
-            <div className="w-px h-6 bg-amber-100/20" />
-            
-            {/* Quality */}
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-amber-600 rounded-full animate-pulse" style={{animationDelay: '1s'}} />
-              <span className="text-sm font-semibold text-amber-100">Discreet Coordination</span>
-            </div>
-          </div>
-        </div>
 
       </div>
       
