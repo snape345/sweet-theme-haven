@@ -12,35 +12,35 @@ export function Services() {
 
   const services = [
     {
-      id: 'sourcing',
+      id: 'talent-curation',
       number: '01',
-      title: 'Sourcing',
+      title: 'Talent Curation',
       description:
-        "Freelance DJs, vocalists, dancers, violinists and specialty performers matched to your venue's room, mood and clientele.",
+        'We select freelance DJs, vocalists, dancers, musicians and speciality performers that fit your venue, event format and audience.',
       image: serviceSourcing,
     },
     {
-      id: 'online-promotion',
+      id: 'talent-booking',
       number: '02',
-      title: 'Online Promotion',
+      title: 'Talent Booking',
       description:
-        'Discreet social-media promotion for talent and venue collaborations, thoughtfully produced content that respects your brand.',
+        'We manage the booking process for performers, confirming availability and performance details so your lineup is clear and professional.',
       image: servicePromotion,
     },
     {
-      id: 'coordination',
+      id: 'performance-coordination',
       number: '03',
-      title: 'Booking Coordination',
+      title: 'Performance Coordination',
       description:
-        'A single point of contact for introductions, availability and logistics, no commercial transactions handled online.',
+        'We coordinate schedules, call times and key logistics between talent and venue to help performances run smoothly.',
       image: serviceCoordination,
     },
     {
-      id: 'programming',
+      id: 'venue-programming',
       number: '04',
-      title: 'Venue Programming',
+      title: 'Venue Entertainment Programming',
       description:
-        'Ongoing calendars for hotels, beach clubs and lounges, the right artist in the right slot, week after week.',
+        'For hotels, lounges and beach clubs, we support venue entertainment programming, from weekly sets to seasonal lineups.',
       image: serviceProgramming,
     },
   ]
