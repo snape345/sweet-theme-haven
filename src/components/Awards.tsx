@@ -11,16 +11,16 @@ export function Awards() {
   const whatsappPhone = '971528896974'
 
   const categories = [
-    { image: catHosts, title: 'Event Hosts & Presenters' },
-    { image: catDjs, title: 'Live Music & DJs' },
-    { image: catDancers,  title: 'Dancers & Stage Performers' },
-    { image: catModels, title: 'Models & Brand Ambassadors' },
-    { image: catActors, title: 'Actors & Voiceover Talent' },
-    { image: catSpeciality, title: 'Speciality & Interactive Entertainment' },
+    { image: catHosts, title: 'Event hosts and presenters' },
+    { image: catDjs, title: 'Live music and DJs' },
+    { image: catDancers, title: 'Dancers and stage performers' },
+    { image: catModels, title: 'Models and brand ambassadors' },
+    { image: catActors, title: 'Actors and voiceover talent' },
+    { image: catSpeciality, title: 'Speciality and interactive entertainment' },
   ]
 
   const getWhatsAppUrl = (category: string) => {
-    const message = `Hello, I would like to book ${category} for an event in Dubai.`
+    const message = `Hello, I would like to request ${category} for an event in Dubai.`
     return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`
   }
 
