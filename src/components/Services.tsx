@@ -70,13 +70,13 @@ export function Services() {
           >
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
-              What We Quietly Do
+              What We Do
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
           <h2
-            className={`text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-amber-50 transform transition-all duration-1000 delay-200 ${
+            className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-amber-50 transform transition-all duration-1000 delay-200 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}
           >
@@ -88,7 +88,7 @@ export function Services() {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
           >
-            Four focused offerings, sourcing, promotion and coordination for Dubai's premium hospitality.
+            We curate and coordinate professional performers for events, venues and private functions across the UAE.
           </p>
         </div>
 
