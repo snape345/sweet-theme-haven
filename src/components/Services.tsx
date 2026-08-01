@@ -12,35 +12,35 @@ export function Services() {
 
   const services = [
     {
-      id: 'sourcing',
+      id: 'talent-curation',
       number: '01',
-      title: 'Sourcing',
+      title: 'Talent Curation',
       description:
-        "Freelance DJs, vocalists, dancers, violinists and specialty performers matched to your venue's room, mood and clientele.",
+        'We select freelance DJs, vocalists, dancers, musicians and speciality performers that fit your venue, event format and audience.',
       image: serviceSourcing,
     },
     {
-      id: 'online-promotion',
+      id: 'talent-booking',
       number: '02',
-      title: 'Online Promotion',
+      title: 'Talent Booking',
       description:
-        'Discreet social-media promotion for talent and venue collaborations, thoughtfully produced content that respects your brand.',
+        'We manage the booking process for performers, confirming availability and performance details so your lineup is clear and professional.',
       image: servicePromotion,
     },
     {
-      id: 'coordination',
+      id: 'performance-coordination',
       number: '03',
-      title: 'Booking Coordination',
+      title: 'Performance Coordination',
       description:
-        'A single point of contact for introductions, availability and logistics, no commercial transactions handled online.',
+        'We coordinate schedules, call times and key logistics between talent and venue to help performances run smoothly.',
       image: serviceCoordination,
     },
     {
-      id: 'programming',
+      id: 'venue-programming',
       number: '04',
-      title: 'Venue Programming',
+      title: 'Venue Entertainment Programming',
       description:
-        'Ongoing calendars for hotels, beach clubs and lounges, the right artist in the right slot, week after week.',
+        'For hotels, lounges and beach clubs, we support venue entertainment programming, from weekly sets to seasonal lineups.',
       image: serviceProgramming,
     },
   ]
@@ -70,13 +70,13 @@ export function Services() {
           >
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
-              What We Quietly Do
+              What We Do
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
           <h2
-            className={`text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-amber-50 transform transition-all duration-1000 delay-200 ${
+            className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-amber-50 transform transition-all duration-1000 delay-200 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}
           >
@@ -88,7 +88,7 @@ export function Services() {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
           >
-            Four focused offerings, sourcing, promotion and coordination for Dubai's premium hospitality.
+            We curate and coordinate professional performers for events, venues and private functions across the UAE.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export function Services() {
 
         <div className="mt-16 text-center">
           <p className="text-sm text-amber-200/60 leading-relaxed max-w-2xl mx-auto">
-            Every shortlist is built quietly, deliberately, and matched to the room it will play in.
+            Every shortlist is matched to your venue, your audience and the night you are planning.
           </p>
         </div>
       </div>

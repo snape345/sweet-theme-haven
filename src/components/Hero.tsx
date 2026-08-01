@@ -260,12 +260,12 @@ export function Hero() {
               Talent Sourcing, Dubai
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.95)]">
-            <span className="block">TALENT FOR DUBAI'S</span>
-            <span className="block">FINEST VENUES</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.95)]">
+            <span className="block">Talent for Dubai's</span>
+            <span className="block">finest venues</span>
           </h1>
-          <p className="mt-5 text-white/90 text-base sm:text-lg max-w-xl [text-shadow:0_2px_16px_rgba(0,0,0,0.95)]">
-            Freelance DJs, vocalists, dancers, violinists and performers, sourced discreetly for hotels, lounges and beach clubs across Dubai.
+          <p className="mt-5 text-white/90 text-base sm:text-lg max-w-2xl [text-shadow:0_2px_16px_rgba(0,0,0,0.95)]">
+            Talent Source ME curates and coordinates professional DJs, vocalists, dancers, musicians and speciality performers for hotels, lounges, beach clubs and private events across Dubai and the UAE.
           </p>
         </div>
 

@@ -44,17 +44,17 @@ export function Contact() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
-              A Quiet Conversation
+              Get In Touch
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-8 text-amber-50">
-            <span className="block mb-2">Source Talent. Programme Nights.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-amber-50">
+            Enquire
           </h2>
 
           <p className="text-lg lg:text-xl text-amber-100/60 max-w-3xl mx-auto leading-relaxed">
-            Tell us about your venue, dates and the mood you have in mind, we'll come back with a shortlist.
+            Tell us about your venue, dates and the mood you have in mind. We will send you a curated shortlist of performers.
           </p>
         </div>
 
@@ -64,16 +64,16 @@ export function Contact() {
             <div className="px-8 py-6 border-b border-amber-200/10">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-black text-amber-50 mb-1">
-                    Enquire
+                  <h3 className="text-xl font-bold text-amber-50 mb-1">
+                    Send us your brief
                   </h3>
                   <p className="text-amber-100/50 text-sm">
-                    Share your brief, a single point of contact will reply discreetly
+                    A single point of contact will reply to you directly.
                   </p>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
                   <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-                  <span className="text-sm text-amber-100/50 font-medium">Launching soon · Dubai</span>
+                  <span className="text-sm text-amber-100/50 font-medium">Dubai, UAE</span>
                 </div>
               </div>
             </div>
@@ -121,30 +121,30 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-amber-500 text-stone-950 font-black text-lg hover:bg-amber-400 transition-colors disabled:opacity-50"
+                className="w-full py-4 rounded-xl bg-amber-500 text-stone-950 font-bold text-lg hover:bg-amber-400 transition-colors disabled:opacity-50"
               >
-                {isSubmitting ? 'Sending...' : 'Submit Enquiry'}
+                {isSubmitting ? 'Sending...' : 'Submit enquiry'}
               </button>
             </form>
           </div>
-        </div>
 
-        {/* Bottom Info */}
-        <div className="text-center mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { n: '01', t: 'Inquire', d: 'Share your venue, dates and the mood you have in mind' },
-              { n: '02', t: 'Get Matched', d: 'A shortlist of freelance DJs, vocalists, dancers or performers' },
-              { n: '03', t: 'Coordinate', d: 'Introductions, timing and light online promotion, no online payments' },
-            ].map((s) => (
-              <div key={s.n} className="rounded-2xl border border-amber-200/10 bg-stone-950/40 p-6 text-left">
-                <div className="text-amber-500 font-black text-sm tracking-[0.2em] mb-3">{s.n}</div>
-                <h4 className="font-black text-amber-50 mb-2">{s.t}</h4>
-                <p className="text-amber-100/50 text-sm leading-relaxed">{s.d}</p>
-              </div>
-            ))}
+          {/* WhatsApp CTA */}
+          <div className="mt-8 rounded-2xl border border-amber-200/10 bg-stone-950/40 p-6 text-center">
+            <h3 className="text-lg font-bold text-amber-50 mb-2">Prefer WhatsApp?</h3>
+            <p className="text-amber-100/60 text-sm mb-5">
+              Chat with us at +971 52 889 6974.
+            </p>
+            <a
+              href="https://wa.me/971528896974"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-6 py-3 text-sm font-semibold text-amber-100 transition-all hover:bg-amber-500 hover:text-stone-950"
+            >
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
+
 
       </div>
     </section>

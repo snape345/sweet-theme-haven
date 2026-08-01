@@ -11,16 +11,16 @@ export function Awards() {
   const whatsappPhone = '971528896974'
 
   const categories = [
-    { image: catHosts, title: 'Event Hosts & Presenters' },
-    { image: catDjs, title: 'Live Music & DJs' },
-    { image: catDancers,  title: 'Dancers & Stage Performers' },
-    { image: catModels, title: 'Models & Brand Ambassadors' },
-    { image: catActors, title: 'Actors & Voiceover Talent' },
-    { image: catSpeciality, title: 'Speciality & Interactive Entertainment' },
+    { image: catHosts, title: 'Event hosts and presenters' },
+    { image: catDjs, title: 'Live music and DJs' },
+    { image: catDancers, title: 'Dancers and stage performers' },
+    { image: catModels, title: 'Models and brand ambassadors' },
+    { image: catActors, title: 'Actors and voiceover talent' },
+    { image: catSpeciality, title: 'Speciality and interactive entertainment' },
   ]
 
   const getWhatsAppUrl = (category: string) => {
-    const message = `Hello, I would like to book ${category} for an event in Dubai.`
+    const message = `Hello, I would like to request ${category} for an event in Dubai.`
     return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`
   }
 
@@ -38,18 +38,17 @@ export function Awards() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
-              Trusted Across Dubai
+              Our Roster
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-amber-50">
-            <span className="block">Nights that feel effortless.</span>
-            <span className="block">Programmed for the city's finest rooms.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-amber-50">
+            Talent categories
           </h2>
 
           <p className="text-lg text-amber-100/60 leading-relaxed max-w-3xl mx-auto">
-            Freelance artists we source play hotels, beach clubs, rooftops, lounges and private venues across the UAE.
+            We work with a focused roster of performers for Dubai events and venues.
           </p>
         </div>
 
@@ -84,7 +83,7 @@ export function Awards() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400/30 bg-amber-500/10 px-5 py-2.5 text-sm font-semibold text-amber-100 transition-all hover:bg-amber-500 hover:text-stone-950 active:scale-[0.98]"
                 >
-                  Book Now
+                  Request talent
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="14"

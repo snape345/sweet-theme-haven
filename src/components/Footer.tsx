@@ -26,8 +26,8 @@ export function Footer() {
                 TALENT SOURCE ME
               </div>
               <p className="text-background/70 leading-relaxed mb-6">
-                A discreet Dubai-based sourcing concept connecting hotels, lounges and beach clubs
-                with freelance DJs, singers, dancers and performers. Launching soon.
+                Talent Source ME curates and coordinates professional DJs, vocalists, dancers,
+                musicians and speciality performers for venues and events across Dubai and the UAE.
               </p>
               {/* Social Media Icons */}
               <div className="flex items-center space-x-6">
@@ -92,12 +92,11 @@ export function Footer() {
           {/* Tools We Use Section */}
           <div className="col-span-12 md:col-span-8">
             <div>
-              <h4 className="font-black text-2xl text-background mb-4">VENUES WE PROGRAMME</h4>
-              
+              <h4 className="font-bold text-2xl text-background mb-4">Venues we programme</h4>
+
               {/* Industries Description */}
               <p className="text-background/70 text-base mb-8 leading-relaxed">
-                From heritage hotels to breakout beach clubs, we source freelance talent for
-                every room that shapes a Dubai night.
+                We source performers for hotels, beach clubs, lounges and private events across the UAE.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -116,12 +115,12 @@ export function Footer() {
 
         {/* Bottom Bar - Simplified */}
         <div className="border-t border-background/20 pt-8 mt-16">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-background/70 mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+            <div className="text-sm text-background/70">
               © {new Date().getFullYear()} Talent Source ME. All rights reserved.
             </div>
-            <div className="text-sm text-background/70">
-              DUBAI, UNITED ARAB EMIRATES · HELLO@TALENTSOURCE.ME
+            <div className="text-sm text-background/70 text-center md:text-right">
+              Dubai, United Arab Emirates · hello@talentsource.me · WhatsApp: +971 52 889 6974
             </div>
           </div>
         </div>
