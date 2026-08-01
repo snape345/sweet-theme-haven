@@ -21,6 +21,13 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
+        crimson: {
+          400: "#e94657",
+          500: "#d92435",
+          600: "#c0202c",
+          700: "#9c1622",
+        },
+        cream: "#f5ecd9",
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
