@@ -92,12 +92,11 @@ export function Footer() {
           {/* Tools We Use Section */}
           <div className="col-span-12 md:col-span-8">
             <div>
-              <h4 className="font-black text-2xl text-background mb-4">VENUES WE PROGRAMME</h4>
-              
+              <h4 className="font-bold text-2xl text-background mb-4">Venues we programme</h4>
+
               {/* Industries Description */}
               <p className="text-background/70 text-base mb-8 leading-relaxed">
-                From heritage hotels to breakout beach clubs, we source freelance talent for
-                every room that shapes a Dubai night.
+                We source performers for hotels, beach clubs, lounges and private events across the UAE.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
