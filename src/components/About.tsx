@@ -9,32 +9,32 @@ export function About() {
   const processSteps = [
     {
       number: "01",
-      title: "Inquire",
-      description: "Share your venue, dates and the mood you have in mind",
+      title: "Enquire",
+      description: "Share your venue, dates and the mood you have in mind.",
       color: "amber-500"
     },
     {
       number: "02",
-      title: "Get Matched",
-      description: "A shortlist of freelance DJs, vocalists, dancers or performers",
+      title: "Get matched",
+      description: "We send you a shortlist of performers that suit your brief.",
       color: "rose-400"
     },
     {
       number: "03",
-      title: "Coordinate",
-      description: "Introductions, timing and logistics, quietly handled",
+      title: "Confirm",
+      description: "You select your preferred talent and we confirm the booking details.",
       color: "amber-600"
     },
     {
       number: "04",
-      title: "Programme the Night",
-      description: "The artist performs; you keep commercial terms direct",
+      title: "Coordinate",
+      description: "We coordinate schedules and key logistics between talent and venue.",
       color: "amber-500"
     },
     {
       number: "05",
-      title: "Promote & Repeat",
-      description: "Light online promotion and a growing roster you can rebook",
+      title: "Repeat",
+      description: "For recurring dates or new events, we keep curating performers that match your guests and brand.",
       color: "rose-400"
     }
   ]
