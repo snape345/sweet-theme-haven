@@ -38,18 +38,17 @@ export function Awards() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-200/70">
-              Trusted Across Dubai
+              Our Roster
             </span>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-amber-50">
-            <span className="block">Nights that feel effortless.</span>
-            <span className="block">Programmed for the city's finest rooms.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-amber-50">
+            Talent categories
           </h2>
 
           <p className="text-lg text-amber-100/60 leading-relaxed max-w-3xl mx-auto">
-            Freelance artists we source play hotels, beach clubs, rooftops, lounges and private venues across the UAE.
+            We work with a focused roster of performers for Dubai events and venues.
           </p>
         </div>
 
